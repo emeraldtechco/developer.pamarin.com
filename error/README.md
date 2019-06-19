@@ -55,3 +55,13 @@
 - `not_found` คือ ไม่พบข้อมูลที่ร้องขอ 
 - `rate_limit` คือ ใช้งานเกิน limit ที่กำหนดไว้ 
 - `server_error` คือ ระบบประมวลผลผิดพลาด  
+
+### error_status
+
+> http status error code 
+
+- type : String
+- nullable : Not Null   
+
+เช่น 
+- `400` คือ Bad Request คำร้องขอไม่ถูกต้อง 
