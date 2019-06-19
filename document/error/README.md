@@ -162,7 +162,8 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 
 # State
 
-> validation state ของ client เพื่อใช้ป้องกัน csrf ซึ่ง server จะส่งกลับไปด้วยกรณีเกิด error (ถ้า client ส่ง parameter นี้มา) 
+> validation state ของ client เพื่อใช้ป้องกัน csrf ซึ่ง server จะส่งกลับไปด้วยกรณีเกิด error (ถ้า client ส่ง parameter นี้มา) ส่วนมากจะใช้กับกรณีการ authen ด้วย OAuth
+
 
 - type : `String`
 - nullable : Allow  
