@@ -39,7 +39,7 @@
 - `unauthorized` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ  
 - `unauthorized_client` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ   
 - `access_denied` คือ ไม่มีสิทธิ์เข้าถึง
-- `lock_user` คือ บัญชีผู้ใช้ถูกล็อค (Lock)
+- `user_locked` คือ บัญชีผู้ใช้ถูกล็อค (Lock)
 - `invalid_request` คือ คำร้องขอไม่ถูกต้อง  
 - `invalid_csrf_token` คือ คำร้องขอไม่ถูกต้อง ตาม flow ที่กำหนด  
 - `invalid_same_origin` คือ คำร้องขอไม่ถูกต้อง (url ที่เรียกใช้ ไม่ได้อยู่ในรายการที่อนุญาต) 
