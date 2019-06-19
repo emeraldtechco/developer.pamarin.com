@@ -64,12 +64,14 @@
 - nullable : Not Null   
 
 เช่น 
-- `400` คือ Bad Request คำร้องขอไม่ถูกต้อง 
+- `400` คือ Bad Request คำร้องขอไม่ถูกต้อง ไม่เป็นไปตามข้อกำหนด 
 - `401` คือ Unauthorized ไม่ได้ login หรือ ระบุตัวตนเข้าสู่ระบบ 
 - `403` คือ Forbidden หรือ Access Denied ไม่มีสิทธิ์เข้าถึง 
 - `404` คือ Not Found ไม่พบข้อมูล 
 - `405` คือ Method Not Allowed ไม่รองรับ http method ที่ส่งมา
-- `406` คือ Not Acceptable ไม่ยอมรัับ http request นี้ 
+- `406` คือ Not Acceptable ไม่ยอมรับ http request นี้ 
 - `415` คือ Unsupported Media Type ไม่รองรับ content-type ตามที่ส่งมา 
 - `429` คือ Too Many Requests จำนวนคำขอมากเกินไป 
-- `500` คือ Internal Server Error ระบบ server ประมวลผลผิดพลาด 
+- `500` คือ Internal Server Error ระบบประมวลผลผิดพลาด   
+- `503` คือ Service Unavailable ระบบปลายทางล่ม หรือปิดปรัับปรุง 
+
