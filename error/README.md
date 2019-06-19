@@ -86,3 +86,8 @@
 
 - Please login 
 - Require access token in http header \"Authorization\" : \"bearer $TOKEN\" 
+- Access denied  
+- Not found 
+- Path not found 
+- Invalid Username or Password 
+- User Locked 
