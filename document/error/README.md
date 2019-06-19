@@ -100,3 +100,14 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 
 - type : `String`
 - nullable : Not Allow
+
+### error_uri  
+
+> url เอกสารสำหรับอธิบาย error  
+
+- type : `String`
+- nullable : Allow  
+
+เช่น  
+
+- [https://developer.pamarin.com/document/error/](https://developer.pamarin.com/document/error/) 
