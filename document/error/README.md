@@ -14,7 +14,7 @@
   "error_status": 401,
   "error_description": "Require access token in http header \"Authorization\" : \"bearer $TOKEN\"",
   "error_timestamp": 1560939554466,
-  "error_uri": "https://developer.pamarin.com/error/",
+  "error_uri": "https://developer.pamarin.com/document/error/",
   "error_code": "31db055ecac97230",
   "error_fields": [],
   "state": null
