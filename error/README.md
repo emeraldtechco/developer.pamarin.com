@@ -37,10 +37,18 @@
 
 เช่น 
 - `unauthorized` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ  
+- `unauthorized_client` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ   
 - `access_denied` คือ ไม่มีสิทธิ์เข้าถึง
+- `lock_user` คือ บัญชีผู้ใช้ถูกล็อค (Lock)
 - `invalid_request` คือ คำร้องขอไม่ถูกต้อง  
 - `invalid_csrf_token` คือ คำร้องขอไม่ถูกต้อง ตาม flow ที่กำหนด  
 - `invalid_same_origin` คือ คำร้องขอไม่ถูกต้อง (url ที่เรียกใช้ ไม่ได้อยู่ในรายการที่อนุญาต) 
 - `invalid_signature` คือ ข้อมูลที่ส่งมา ไม่ตรงกับ signature ที่ส่งมาด้วย 
+- `invalid_username_password` คือ บัญชีผู้ใช้ หรือรหัสผ่าน ไม่ถูกต้อง
+- `invalid_scope` คือ scope ไม่ถูกต้อง  
+- `invalid_recovery_code` คือ รหัสกู้คือ หรือ recovery code ไม่ถูกต้อง 
+- `invalid_client` คือ แอพพลิเคนชั่น (Application) หรือ Client ที่ใช้เชื่อมต่อ ไม่ถูกต้องหรือได้รับอนุญาต  
+- `unsupported_response_type` คือ ไม่รองรับ response type  
 - `not_found` คือ ไม่พบข้อมูลที่ร้องขอ 
 - `rate_limit` คือ ใช้งานเกิน limit ที่กำหนดไว้ 
+- `server_error` คือ ระบบประมวลผลผิดพลาด  
