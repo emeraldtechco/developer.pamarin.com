@@ -46,7 +46,7 @@
 - `invalid_signature` คือ ข้อมูลที่ส่งมา ไม่ตรงกับ signature (ลายเซ็นอิเล็กทรอนิกส์) ที่ส่งมาด้วย 
 - `invalid_username_password` คือ บัญชีผู้ใช้ หรือรหัสผ่าน ไม่ถูกต้อง
 - `invalid_scope` คือ scope ไม่ถูกต้อง  
-- `invalid_recovery_code` คือ รหัสกู้คือ หรือ recovery code ไม่ถูกต้อง 
+- `invalid_recovery_code` คือ รหัสกู้คืน หรือ recovery code ไม่ถูกต้อง 
 - `invalid_client` คือ แอพพลิเคนชั่น (Application) หรือ Client ที่ใช้เชื่อมต่อ ไม่ถูกต้องหรือได้รับอนุญาต  
 - `unsupported_response_type` คือ ไม่รองรับ response type  
 - `not_found` คือ ไม่พบข้อมูลที่ร้องขอ 
