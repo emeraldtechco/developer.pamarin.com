@@ -73,5 +73,5 @@
 - `415` คือ Unsupported Media Type ไม่รองรับ content-type ตามที่ส่งมา 
 - `429` คือ Too Many Requests จำนวนคำขอมากเกินไป 
 - `500` คือ Internal Server Error ระบบประมวลผลผิดพลาด   
-- `503` คือ Service Unavailable ระบบปลายทางล่ม หรือปิดปรัับปรุง 
+- `503` คือ Service Unavailable ระบบปลายทางล่ม หรือปิดปรับปรุง 
 
