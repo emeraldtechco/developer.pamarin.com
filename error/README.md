@@ -31,9 +31,12 @@
 
 # รายะเอียด (Details)
 
-### error (`String`)
+### error
 
 > ประเภท error ของระบบ
+
+- type : String
+- nullable : Not Null
 
 เช่น 
 - `unauthorized` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ  
