@@ -36,7 +36,7 @@
 > ประเภท error ของระบบ
 
 - type : String
-- nullable : Not Null
+- nullable : :x: 
 
 เช่น 
 - `unauthorized` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ  
