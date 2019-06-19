@@ -6,7 +6,7 @@
 > [https://api.pamarin.com/v1/errors](https://api.pamarin.com/v1/errors)
 
 # Format 
-ทุก ๆ Service ของ Pamarin จะแสดง `error` โดยมีรูปแบบดังต่อไปนี้
+ทุก ๆ Service จะแสดง `error` โดยมีรูปแบบดังต่อไปนี้
 
 ```json
 {
