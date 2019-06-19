@@ -114,7 +114,8 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 
 # error_code 
 
-> รหัส (`trace_id`) ไว้ใช้สำหรับ track ต้นตอของ error ที่เกิดขึ้น  
+> รหัส (`trace_id`) ไว้ใช้สำหรับค้นหาต้นตอของ error ที่เกิดขึ้น  
+> เป็นรหัสสำหรับผู้ดูและระบบ (Admin) หรือผู้พัฒนา ไว้ค้นหาตำแหน่งของ error ที่เกิดขึ้นในระบบ
 
 - type : `String`
 - nullable : Allow   
