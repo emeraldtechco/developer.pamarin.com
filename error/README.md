@@ -36,7 +36,7 @@
 > ประเภท error ของระบบ
 
 - type : `String`
-- nullable : Not Null 
+- nullable : Not Allow 
 
 เช่น 
 - `unauthorized` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ  
@@ -61,7 +61,7 @@
 > http status error code 
 
 - type : `Number` 
-- nullable : Not Null   
+- nullable : Not Allow   
 
 เช่น 
 - `400` คือ Bad Request คำร้องขอไม่ถูกต้อง ไม่เป็นไปตามข้อกำหนด 
@@ -75,3 +75,14 @@
 - `500` คือ Internal Server Error ระบบประมวลผลผิดพลาด   
 - `503` คือ Service Unavailable ระบบปลายทางล่ม หรือปิดปรับปรุง 
 
+### error_description 
+
+> message ที่อธิบายว่า error นี้เกิดจากอะไร
+
+- type : `String`
+- nullable : Allow
+
+เช่น
+
+- Please login 
+- Require access token in http header \"Authorization\" : \"bearer $TOKEN\" 
