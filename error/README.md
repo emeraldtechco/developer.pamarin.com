@@ -50,7 +50,7 @@
 - `invalid_username_password` คือ บัญชีผู้ใช้ หรือรหัสผ่าน ไม่ถูกต้อง
 - `invalid_scope` คือ scope ไม่ถูกต้อง  
 - `invalid_recovery_code` คือ รหัสกู้คืน หรือ recovery code ไม่ถูกต้อง 
-- `invalid_client` คือ แอพพลิเคนชั่น (Application) หรือ Client ที่ใช้เชื่อมต่อ ไม่ถูกต้องหรือได้รับอนุญาต  
+- `invalid_client` คือ แอพพลิเคนชั่น (Application) หรือ Client ที่ใช้เชื่อมต่อ ไม่ถูกต้องหรือได้รับอนุญาต เช่น พารามิเตอร์ `client_id` ที่ส่งมาผิด เป็นต้น 
 - `unsupported_response_type` คือ ไม่รองรับ response type  
 - `not_found` คือ ไม่พบข้อมูลที่ร้องขอ 
 - `rate_limit` คือ ใช้งานเกิน limit ที่กำหนดไว้ 
