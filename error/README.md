@@ -75,6 +75,8 @@
 - `500` คือ Internal Server Error ระบบประมวลผลผิดพลาด   
 - `503` คือ Service Unavailable ระบบปลายทางล่ม หรือปิดปรับปรุง 
 
+reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://developer.mozilla.org/th/docs/Web/HTTP/Status)
+
 ### error_description 
 
 > message ที่อธิบายว่า error นี้เกิดจากอะไร
