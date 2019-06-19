@@ -146,6 +146,16 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
       "name": "email", 
       "code": "available_email", 
       "description": "not available"
+    },
+    {
+      "code": "length",
+      "description": "at least 8 characters",
+      "name": "confirmPassword"
+    },
+    {
+      "code": "password_equals_confirm_password",
+      "description": "password not equals confirm password",
+      "name": "confirmPassword"
     }
   ],  
   "state": "8wC04d/1cW6bE5M="
