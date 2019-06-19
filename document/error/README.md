@@ -93,3 +93,10 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 - Path not found 
 - Invalid Username or Password 
 - User Locked 
+
+### error_timestamp  
+
+> เวลา timestamp ที่เกิด error  
+
+- type : `String`
+- nullable : Not Allow
