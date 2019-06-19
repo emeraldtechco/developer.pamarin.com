@@ -159,3 +159,13 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
   - `length` จะต้องมีความยาว String ตามที่กำหนด 
   - `size` จะต้องมี size ตามที่กำหนด
 - `error_fields[].description` (String) คือ คำอธิบาย error field นั้น ๆ
+
+# State
+
+> validation state ของ client เพื่อใช้ป้องกัน csrf ซึ่ง server จะส่งกลับไปด้วยกรณีเกิด error (ถ้า client ส่ง parameter นี้มา) 
+
+- type : `String`
+- nullable : Allow  
+
+เช่น
+- 8wC04d/1cW6bE5M=
