@@ -36,4 +36,4 @@
 > ประเภท error ของระบบ
 
 เช่น 
-- `unauthorized` คือ ยังไม่ได้ login เข้าสู่ระบบ  
+- `unauthorized` คือ ยังไม่ได้ทำการ sign-in เข้าสู่ระบบ  
