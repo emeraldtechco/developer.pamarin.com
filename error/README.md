@@ -35,7 +35,7 @@
 
 > ประเภท error ของระบบ
 
-- type : String
+- type : `String`
 - nullable : Not Null 
 
 เช่น 
@@ -60,7 +60,7 @@
 
 > http status error code 
 
-- type : String
+- type : `Number` 
 - nullable : Not Null   
 
 เช่น 
