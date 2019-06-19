@@ -11,13 +11,12 @@
 ```json
 {
   "error": "unauthorized",
-  "error_type": "AuthenticationException",
-  "error_timestamp": 1560932838854,
   "error_status": 401,
   "error_description": "Require access token in http header \"Authorization\" : \"bearer $TOKEN\"",
+  "error_timestamp": 1560937742447,
   "error_uri": null,
-  "state": null,
-  "error_code": null,
-  "error_fields": []
+  "error_code": "fba3e30dc69e249c",
+  "error_fields": [],
+  "state": null
 }
 ```
