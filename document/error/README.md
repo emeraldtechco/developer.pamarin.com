@@ -26,7 +26,7 @@
 - `error_timestamp` (Number) คือ เวลา timestamp ที่เกิด error
 - `error_uri` (String) คือ url เอกสารสำหรับอธิบาย error 
 - `error_code` (String) คือ รหัส (`trace_id`) สำหรับผู้ดูและระบบ (Admin) หรือผู้พัฒนา ไว้ค้นหาตำแหน่งของ error ที่เกิดขึ้นในระบบ 
-- `error_fields` (Array) ใช้สำหรับกรณี validate input form แล้วเกิด error ขึ้นที่ field ใด field หนึ่ง
+- `error_fields` (Array of Object) ใช้สำหรับกรณี validate input form แล้วเกิด error ขึ้นที่ field ใด field หนึ่ง
 - `state` (String) คือ validation state ของ client เพื่อใช้ป้องกัน csrf ซึ่ง server จะส่งกลับไปด้วยกรณีเกิด error (ถ้า client ส่ง parameter นี้มา)
 
 # รายะเอียด (Details)
@@ -123,3 +123,10 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 - a01120592219db7e  
 - 31db055ecac97230 
 - 2d18884122fa6d0b 
+
+# error_fields 
+
+> ใช้สำหรับกรณี validate input form แล้วเกิด error ขึ้นที่ field ใด field หนึ่ง  
+
+- type : `Array of Object`
+- nullable : Not Allow (default empty array)  
