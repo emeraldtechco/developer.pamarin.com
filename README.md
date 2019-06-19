@@ -1,2 +1,2 @@
 # เนื้อหา
-- [error](error.md)
+- [ข้อผิดพาด (Error)](error/README.md)
