@@ -143,9 +143,9 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
   "error_uri": "https://developer.pamarin.com/document/error/",
   "error_fields": [
     {
-      "name": "email", 
       "code": "available_email", 
-      "description": "not available"
+      "description": "not available",
+      "name": "email" 
     },
     {
       "code": "length",
