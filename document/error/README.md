@@ -151,3 +151,5 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
   "state": "8wC04d/1cW6bE5M="
 }
 ```
+- `error_fields[].name` (String) คือ ชื่อ field ที่เกิด error  
+- `error_fields[].code` (String) คือ ประเภท error ของ field นั้น ๆ เช่น `not_null` (จะต้องไม่เป็น null) `not_blank` จะต้องไม่เป็น empty string เป็นต้น 
