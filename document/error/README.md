@@ -145,11 +145,15 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
     {
       "name": "email", 
       "code": "AvailableEmail", 
-      "message": "not available"
+      "description": "not available"
     }
   ],  
   "state": "8wC04d/1cW6bE5M="
 }
 ```
 - `error_fields[].name` (String) คือ ชื่อ field ที่เกิด error  
-- `error_fields[].code` (String) คือ ประเภท error ของ field นั้น ๆ เช่น `not_null` (จะต้องไม่เป็น null) `not_blank` จะต้องไม่เป็น empty string เป็นต้น 
+- `error_fields[].code` (String) คือ ประเภท error ของ field นั้น ๆ เช่น 
+  - `not_null` (จะต้องไม่เป็น null) 
+  - `not_blank` จะต้องไม่เป็น empty string
+  - `length` จะต้องมีความยาวตามที่กำหนด 
+- `error_fields[].description` (String) คือ คำอธิบาย error field นั้น ๆ
