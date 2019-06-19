@@ -98,7 +98,7 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 
 > เวลา timestamp ที่เกิด error  
 
-- type : `String`
+- type : `Number`
 - nullable : Not Allow
 
 # error_uri  
