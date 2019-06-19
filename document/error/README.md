@@ -130,3 +130,24 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 
 - type : `Array of Object`
 - nullable : Not Allow (default empty array)  
+
+ตัวอย่าง
+
+```json
+{
+  "error": "invalid_request",
+  "error_code": "4afed893447f585c",
+  "error_description": "Validate fail",
+  "error_status": 400,
+  "error_timestamp": 1560957259332,
+  "error_uri": "https://developer.pamarin.com/document/error/",
+  "error_fields": [
+    {
+      "name": "email", 
+      "code": "AvailableEmail", 
+      "message": "not available"
+    }
+  ],  
+  "state": "8wC04d/1cW6bE5M="
+}
+```
