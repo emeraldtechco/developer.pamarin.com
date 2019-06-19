@@ -28,3 +28,12 @@
 - `error_code` (String) คือ รหัส (`trace_id`) ไว้ใช้สำหรับ track ต้นตอของ error ที่เกิดขึ้น 
 - `error_fields` (Array) ใช้สำหรับกรณี validate input form แล้วเกิด error ขึ้นที่ field ใด field หนึ่ง
 - `state` (String) คือ validation state ของ client เพื่อใช้ป้องกัน csrf ซึ่ง server จะส่งกลับไปด้วยกรณีเกิด error (ถ้า client ส่ง parameter นี้มา)
+
+# รายะเอียด (Details)
+
+### error
+
+> Type `String` คือ ประเภท error ของระบบ
+
+เช่น 
+- `unauthorized` คือ ยังไม่ได้ login เข้าสู่ระบบ  
