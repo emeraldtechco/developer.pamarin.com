@@ -3,4 +3,4 @@
 > เอกสารการพัฒนาระบบของ website [https://pamarin.com](https://pamarin.com)
 
 # เนื้อหา
-- [ข้อผิดพาด (Error)](error/README.md)
+- [ข้อผิดพลาด (Error)](error/README.md)
