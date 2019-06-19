@@ -111,3 +111,15 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 เช่น  
 
 - [https://developer.pamarin.com/document/error/](https://developer.pamarin.com/document/error/) 
+
+# error_code 
+
+> รหัส (`trace_id`) ไว้ใช้สำหรับ track ต้นตอของ error ที่เกิดขึ้น  
+
+- type : `String`
+- nullable : Allow   
+
+เช่น 
+- a01120592219db7e  
+- 31db055ecac97230 
+- 2d18884122fa6d0b 
