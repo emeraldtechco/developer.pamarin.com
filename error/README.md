@@ -1,5 +1,10 @@
 # ข้อผิดพาด (Error) 
 
+> การจัดการข้อผิดพลาดต่าง ๆ ในระบบ
+
+# ตัวอย่าง
+> https://api.pamarin.com/v1/errors 
+
 # Format 
 ทุก ๆ Service ของ Pamarin จะแสดง `error` โดยมีรูปแบบดังต่อไปนี้
 
