@@ -43,7 +43,7 @@
 - `invalid_request` คือ คำร้องขอไม่ถูกต้อง  
 - `invalid_csrf_token` คือ คำร้องขอไม่ถูกต้อง ตาม flow ที่กำหนด  
 - `invalid_same_origin` คือ คำร้องขอไม่ถูกต้อง (url ที่เรียกใช้ ไม่ได้อยู่ในรายการที่อนุญาต) 
-- `invalid_signature` คือ ข้อมูลที่ส่งมา ไม่ตรงกับ signature ที่ส่งมาด้วย 
+- `invalid_signature` คือ ข้อมูลที่ส่งมา ไม่ตรงกับ signature (ลายเซ็นอิเล็กทรอนิกส์) ที่ส่งมาด้วย 
 - `invalid_username_password` คือ บัญชีผู้ใช้ หรือรหัสผ่าน ไม่ถูกต้อง
 - `invalid_scope` คือ scope ไม่ถูกต้อง  
 - `invalid_recovery_code` คือ รหัสกู้คือ หรือ recovery code ไม่ถูกต้อง 
