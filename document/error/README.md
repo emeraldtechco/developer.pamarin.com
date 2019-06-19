@@ -155,5 +155,7 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 - `error_fields[].code` (String) คือ ประเภท error ของ field นั้น ๆ เช่น 
   - `not_null` (จะต้องไม่เป็น null) 
   - `not_blank` จะต้องไม่เป็น empty string
-  - `length` จะต้องมีความยาวตามที่กำหนด 
+  - `not_empty` จะต้องไม่เป็นค่าว่าง (สำหรับ array หรือ list) 
+  - `length` จะต้องมีความยาว String ตามที่กำหนด 
+  - `size` จะต้องมี size ตามที่กำหนด
 - `error_fields[].description` (String) คือ คำอธิบาย error field นั้น ๆ
