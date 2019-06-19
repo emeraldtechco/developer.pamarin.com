@@ -31,7 +31,7 @@
 
 # รายะเอียด (Details)
 
-### error
+- # error
 
 > ประเภท error ของระบบ
 
@@ -56,7 +56,7 @@
 - `rate_limit` คือ ใช้งานเกิน limit ที่กำหนดไว้ 
 - `server_error` คือ ระบบประมวลผลผิดพลาด  
 
-### error_status
+- # error_status
 
 > http status error code 
 
@@ -77,7 +77,7 @@
 
 Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://developer.mozilla.org/th/docs/Web/HTTP/Status)
 
-### error_description 
+- # error_description 
 
 > message ที่อธิบายว่า error นี้เกิดจากอะไร
 
@@ -94,14 +94,14 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
 - Invalid Username or Password 
 - User Locked 
 
-### error_timestamp  
+- # error_timestamp  
 
 > เวลา timestamp ที่เกิด error  
 
 - type : `String`
 - nullable : Not Allow
 
-### error_uri  
+- # error_uri  
 
 > url เอกสารสำหรับอธิบาย error  
 
