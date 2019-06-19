@@ -144,7 +144,7 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
   "error_fields": [
     {
       "name": "email", 
-      "code": "AvailableEmail", 
+      "code": "available_email", 
       "description": "not available"
     }
   ],  
