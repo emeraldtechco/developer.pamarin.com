@@ -4,4 +4,4 @@
 - [Authorization Code](#authorizationcode)
 
 # Authorization Code
-![authentication.svg](./authentication.svg)
+![authentication-flow.svg](./authentication-flow.svg)
