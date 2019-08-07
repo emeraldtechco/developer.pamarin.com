@@ -41,3 +41,17 @@ Authorization : Bearer $ACCESS_TOKEN
     }
 }
 ```
+4.2) ถ้า `access_token` invalid
+จะ return error กลับไปในรูปแบบ json
+```json
+{
+    "error": "unauthorized_client",
+    "error_status": 401,
+    "error_description": null,
+    "error_timestamp": 1565198086100,
+    "error_uri": "https://developer.pamarin.com/document/error/",
+    "error_code": "eb7852128224cb93",
+    "error_fields": [],
+    "state": null
+}
+```
