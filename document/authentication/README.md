@@ -18,3 +18,8 @@ Request Method : POST
 Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
+4.1 ถ้า `access_token` valid
+จะ return `user_session` กลับมาให้ในรูปแบบ json
+```json
+TODO
+```
