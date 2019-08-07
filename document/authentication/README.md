@@ -21,5 +21,23 @@ Authorization : Bearer $ACCESS_TOKEN
 4.1) ถ้า `access_token` valid
 จะ return `user_session` กลับมาให้ในรูปแบบ json
 ```json
-TODO
+{
+    "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
+    "issuedAt": 1565197615855,
+    "expiresAt": 1565199415855,
+    "user": {
+        "id": "5cff55864ca1bc12305164ba",
+        "name": "นาย สมชาย ใจดี",
+        "authorities": [
+            "ADMIN"
+        ]
+    },
+    "client": {
+        "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a",
+        "name": "OAuth2 Test Application",
+        "scopes": [
+            "user:public_profile"
+        ]
+    }
+}
 ```
