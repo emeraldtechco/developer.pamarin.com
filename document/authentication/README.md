@@ -8,3 +8,13 @@
 
 # Authorization Code
 ![authentication-flow.svg](./authentication-flow.svg)
+
+# Step
+
+2. นำ `access_token` มา build http post 
+ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`
+```
+Request Method : POST
+Content-Type : application/x-www-form-urlencoded
+Authorization : Bearer $ACCESS_TOKEN  
+```
