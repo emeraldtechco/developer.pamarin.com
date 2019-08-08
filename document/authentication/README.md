@@ -50,8 +50,8 @@ Authorization : Bearer $ACCESS_TOKEN
 }
 ```
 4.2) ถ้า `access_token` invalid
-จะ return error กลับไปในรูปแบบ json  
-คำอธิบาย error [https://developer.pamarin.com/document/error/](https://developer.pamarin.com/document/error/)
+จะ return error กลับไปในรูปแบบ json [คำอธิบาย error](./error/) 
+
 ```json
 {
     "error": "unauthorized_client",
