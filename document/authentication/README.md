@@ -110,4 +110,4 @@ refresh_token : $REFRESH_TOKEN
 
 - ### Step 6) 
 Authorization Server ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
-พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถถูกต้อง มีสิทธิ์ของ `access_token` ใหม่หรือไม่ 
+พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถูกต้อง มีสิทธิ์ขอ `access_token` ใหม่หรือไม่ 
