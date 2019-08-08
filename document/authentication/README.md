@@ -32,6 +32,8 @@ Request Method : POST
 Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
+หมายเหตุ : ถ้าไม่มี `access_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 5 เลย 
+
 - ### Step 3)
 Authoriation Server จะทำการ verify `access_token` และ `user_session` 
 ที่เก็บไว้ใน database (redis) ว่ายัง valid อยู่หรือไม่   
