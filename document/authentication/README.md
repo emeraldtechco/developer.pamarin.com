@@ -1,6 +1,6 @@
 # การเข้าสู่ระบบ (Authentication)
 
-[www.pamarin.com](https://www.pamarin.com) ใช้วิธีการ Authen ด้วย OAuth 2.0 ซึ่งเป็น Standard Framework ที่ระบบดัง ๆ เช่น Google, Facebook, Twitter, Youtube etc. ใช้ 
+[www.pamarin.com](https://www.pamarin.com) ใช้วิธีการ Authen ด้วย OAuth 2.0 ซึ่งเป็น Standard Framework เช่นเดียวกับระบบดัง ๆ อย่าง Google, Facebook, Twitter, Youtube etc. ใช้ แต่ทางเราได้มีการปรับแต่งเพิ่มเติมเพื่อให้รองรับ และเหมาะสมกับธุรกรรมต่าง ๆ ของ pamarin มากขึ้น 
 
 # อ้างอิง 
 - [IETF 649 - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
