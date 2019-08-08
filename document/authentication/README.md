@@ -60,6 +60,11 @@ Authoriation Server จะทำการ verify `access_token` และ `user_
     }
 }
 ```
+
+### Step 4.1.1) 
+Client / Resource Server จะเช็คสิทธิ์ (authorities) ตามข้อมูล 
+`user_session` ที่ระบบ authen (Authorization Server) ส่งมาให้  
+
 ### Step 4.2) 
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
 Authorization Server จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
