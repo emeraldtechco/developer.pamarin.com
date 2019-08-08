@@ -2,6 +2,11 @@
 
 [www.pamarin.com](https://www.pamarin.com) ใช้วิธีการ Authen ด้วย OAuth 2.0 ซึ่งเป็น Standard Framework ที่ระบบดัง ๆ เช่น Google, Facebook, Twitter, Youtube etc. ใช้ 
 
+# อ้างอิง 
+- [IETF 649 - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
+- [https://oauth.net/2/](https://oauth.net/2/)  
+- [https://www.oauth.com/](https://www.oauth.com/)  
+
 # บทความ
 - [แนวทางปฏิบัติที่ดี ในการทำ OAuth 2.0 Access Token & Refresh Token เพื่อความปลอดภัย](https://medium.com/@jittagornp/best-practice-%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3-oauth2-access-token-refresh-token-457ae3bee4b7)
 
