@@ -24,7 +24,7 @@ User พยายามเข้าใช้งาน `www.pamarin.com` ผ่�
 โดย browser จะแนบ http cookie : `access_token` / `refresh_token` ไปพร้อมกับ request  
   
 ### Step 2) 
-Client จะนำ `access_token` มา build http post   
+Client / Resource Server จะนำ `access_token` มา build http post   
 ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`  
 Http headers  
 ```
