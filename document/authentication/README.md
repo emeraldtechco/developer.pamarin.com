@@ -19,11 +19,11 @@
 
 # Step
 
-### step 1) 
+### Step 1) 
 เข้าใช้งาน  
 โดย browser จะแนบ http cookie : `access_token` / `refresh_token` ไปพร้อมกับ request  
   
-### step 2) 
+### Step 2) 
 นำ `access_token` มา build http post   
 ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`  
 Http headers  
@@ -32,7 +32,7 @@ Request Method : POST
 Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
-### step 4.1) 
+### Step 4.1) 
 ถ้า `access_token` และ `user_session` valid  
 จะ return `user_session` กลับมาให้ในรูปแบบ json  
 ```json
@@ -56,7 +56,7 @@ Authorization : Bearer $ACCESS_TOKEN
     }
 }
 ```
-### step 4.2) 
+### Step 4.2) 
 ถ้า `access_token` หรือ `user_session` invalid  
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
 
@@ -72,7 +72,7 @@ Authorization : Bearer $ACCESS_TOKEN
     "state": null
 }
 ```
-### step 5)  
+### Step 5)  
 นำ `refresh_token` มา build http post (ต่อจาก 4.2)
 เพื่อขอ access_token ใหม่  
 ส่งไปที่ `authen.pamarin.com/oauth/token` (grant_type=refresh_token)  
