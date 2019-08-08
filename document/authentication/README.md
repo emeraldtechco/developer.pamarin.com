@@ -5,6 +5,7 @@
 
 # Endpoint
 - `/oauth/authorize`
+   - `response_type=code`
 - `/oauth/token`
    - `grant_type=authorization_code`
    - `grant_type=refresh_token`
