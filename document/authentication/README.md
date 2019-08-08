@@ -107,3 +107,7 @@ redirect_uri : ""
 refresh_token : $REFRESH_TOKEN  
 ```
 *** หมายเหตุ : ถ้าไม่มี `refresh_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 8 เลย 
+
+- ### Step 6) 
+Authorization Server ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
+พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถถูกต้อง มีสิทธิ์ของ `access_token` ใหม่หรือไม่ 
