@@ -37,7 +37,7 @@ Authoriation Server จะทำการ verify `access_token` และ `user_
 ที่เก็บไว้ใน database (redis) ว่ายัง valid อยู่หรือไม่   
 
 ### Step 4.1) 
-ถ้า `access_token` และ `user_session` valid  
+ถ้า `access_token` และ `user_session` บน Authorization Server ยัง valid อยู่    
 จะ return `user_session` กลับมาให้ในรูปแบบ json  
 ```json
 {
