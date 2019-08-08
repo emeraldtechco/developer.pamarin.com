@@ -68,6 +68,9 @@ Client / Resource Server จะเช็คสิทธิ์ (authorities) ต�
 - ### Step 4.1.1.1) 
 ถ้าไม่มีสิทธิ์เข้าถึง Client / Resource Server จะ return error (`access denied`) กลับไปหา user   
 
+- ### Step 4.1.1.2) 
+ถ้ามีสิทธิ์เข้าถึง Client / Resource Server จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา 
+
 - ### Step 4.2) 
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
 Authorization Server จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
