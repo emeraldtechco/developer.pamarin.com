@@ -67,7 +67,7 @@ Authorization : Bearer $ACCESS_TOKEN
 ```
 5.) นำ `refresh_token` มา build http post (ต่อจาก 4.2)
 เพื่อขอ access_token ใหม่  
-ส่งไปที่ `authen.pamarin.com/oauth/token` (grant_type=refresh_token)
+ส่งไปที่ `authen.pamarin.com/oauth/token` (grant_type=refresh_token)  
 Http headers  
 ```
 Request Method : POST
