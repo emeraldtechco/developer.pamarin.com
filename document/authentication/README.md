@@ -4,6 +4,10 @@
 
 *** หมายเหตุ : ทาง Pamarin ได้มีการปรับแต่ง OAuth เพิ่มเติมเพื่อให้รองรับและเหมาะสมกับธุรกรรมต่าง ๆ ของ Pamarin มากขึ้น 
 
+# Version
+
+> BETA 
+
 # อ้างอิง 
 - [RFC 6749 - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
 - [https://oauth.net/2/](https://oauth.net/2/)  
