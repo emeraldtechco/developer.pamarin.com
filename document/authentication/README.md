@@ -26,6 +26,7 @@ User พยายามเข้าใช้งาน `www.pamarin.com` (มอ�
 - ### Step 2) 
 Client / Resource Server จะนำ `access_token` มา build http post   
 ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`  
+  
 Http headers  
 ```
 Request Method : POST
@@ -41,6 +42,8 @@ Authoriation Server จะทำการ verify `access_token` และ `user_
 - ### Step 4.1) 
 ถ้า `access_token` และ `user_session` บน Authorization Server ยัง valid อยู่    
 จะ return `user_session` กลับมาให้ในรูปแบบ json  
+  
+Response Body    
 ```json
 {
     "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
@@ -76,7 +79,8 @@ Client / Resource Server จะเช็คสิทธิ์ (authorities) ต�
 - ### Step 4.2) 
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
 Authorization Server จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
-
+  
+Response Body  
 ```json
 {
     "error": "unauthorized_client",
@@ -93,6 +97,7 @@ Authorization Server จะ return error กลับไปในรูปแบ
 นำ `refresh_token` มา build http post (ต่อจาก 4.2)  
 เพื่อขอ `access_token` ใหม่  
 ส่งไปที่ `authen.pamarin.com/oauth/token` (grant_type=refresh_token)  
+  
 Http headers  
 ```
 Request Method : POST
