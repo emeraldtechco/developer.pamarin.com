@@ -106,3 +106,4 @@ grant_type : refresh_token
 redirect_uri : ""
 refresh_token : $REFRESH_TOKEN  
 ```
+*** หมายเหตุ : ถ้าไม่มี `refresh_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 8 เลย 
