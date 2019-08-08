@@ -121,7 +121,7 @@ Authorization Server ทำการ verify request โดยตรวจสอ�
 
 - ### Step 7.1) 
 ถ้า `refresh_token` และ `user_session` valid  
-จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `user_session` กลับไปในรูปแบบ json  
+Authorization Server จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `user_session` กลับไปในรูปแบบ json  
   
 Response Body
 ```json
@@ -151,3 +151,7 @@ Response Body
     }
 }
 ```
+
+- ### Step 7.1.1)
+Client / Resource Server จัดเก็บ `access_token` + `refresh_token` ใหม่ (โดยการ `Set-cookie` กลับไปใน http response ของ browser)     
+รวมทั้งเช็คสิทธิ์ตามข้อมูล `user_session` ที่ระบบ authen ส่งมาให้ 
