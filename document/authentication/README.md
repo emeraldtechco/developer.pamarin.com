@@ -14,13 +14,16 @@
 - [[บันทึกส่วนตัว] : การออกแบบ ระบบ authentication ของ micro service](https://medium.com/@jittagornp/%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%A7-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A-%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A-authentication-%E0%B8%82%E0%B8%AD%E0%B8%87-micro-service-c08bfea025ef)
 
 # Endpoint
+
+> https://authen.pamarin.com
+
 - `/oauth/authorize`
-   - `response_type=code`
+   - `response_type=code` - สำหรับ Grant Authorize และขอ Authorization Code 
 - `/oauth/token`
-   - `grant_type=authorization_code`
-   - `grant_type=refresh_token`
-- `/oauth/session`
-- `/oauth/signout`  
+   - `grant_type=authorization_code` - สำหรับขอ Access Token จาก Authorization Code  
+   - `grant_type=refresh_token` - สำหรับขอ Access Token จาก Refresh Token  
+- `/oauth/session` - สำหรับ Validate Access Token และ Get ข้อมูล User Session 
+- `/oauth/signout` - สำหรับ Signout หรือ Logout ออกจากระบบ  
 
 # Flow
 - [Authorization Code](#authorization-code)
