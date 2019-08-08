@@ -20,11 +20,11 @@
 # Step
 
 ### Step 1) 
-เข้าใช้งาน  
+User พยายามเข้าใช้งาน `www.pamarin.com` ผ่านทาง browser      
 โดย browser จะแนบ http cookie : `access_token` / `refresh_token` ไปพร้อมกับ request  
   
 ### Step 2) 
-นำ `access_token` มา build http post   
+Client จะนำ `access_token` มา build http post   
 ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`  
 Http headers  
 ```
@@ -32,6 +32,10 @@ Request Method : POST
 Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
+### Step 3)
+Authoriation Server จะทำการ verify `access_token` และ `user_session` 
+ที่เก็บไว้ใน database (redis) ว่ายัง valid อยู่หรือไม่   
+
 ### Step 4.1) 
 ถ้า `access_token` และ `user_session` valid  
 จะ return `user_session` กลับมาให้ในรูปแบบ json  
