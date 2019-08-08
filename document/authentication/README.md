@@ -111,3 +111,36 @@ refresh_token : $REFRESH_TOKEN
 - ### Step 6) - endpoint : `/oauth/token`   
 Authorization Server ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
 พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถูกต้อง มีสิทธิ์ขอ `access_token` ใหม่หรือไม่ 
+
+- ### Step 7.1) 
+ถ้า `refresh_token` และ `user_session` valid  
+จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `user_session` กลับไปในรูปแบบ json  
+  
+Response Body
+```json
+{
+    "access_token" : "$ACCESS_TOKEN",
+    "token_type" : "bearer",
+    "expries_in" : 1800,
+    "refresh_token" : "$REFRESH_TOKEN",
+    "session" : {
+          "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
+          "issuedAt": 1565197615855,
+          "expiresAt": 1565199415855,
+          "user": {
+              "id": "5cff55864ca1bc12305164ba",
+              "name": "นาย สมชาย ใจดี",
+              "authorities": [
+                  "ADMIN"
+              ]
+          },
+          "client": {
+              "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a",
+              "name": "OAuth2 Test Application",
+              "scopes": [
+                  "user:public_profile"
+              ]
+          }
+     }
+}
+```
