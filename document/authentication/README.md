@@ -20,14 +20,15 @@
 # Step
   
 2.) นำ `access_token` มา build http post 
-ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`
+ส่งไปตรวจสอบที่ `authen.pamarin/com/oauth/session`  
+Http headers  
 ```
 Request Method : POST
 Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
-4.1) ถ้า `access_token` valid
-จะ return `user_session` กลับมาให้ในรูปแบบ json
+4.1) ถ้า `access_token` และ `user_session` valid
+จะ return `user_session` กลับมาให้ในรูปแบบ json  
 ```json
 {
     "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
@@ -49,7 +50,7 @@ Authorization : Bearer $ACCESS_TOKEN
     }
 }
 ```
-4.2) ถ้า `access_token` invalid
+4.2) ถ้า `access_token` หรือ `user_session` invalid
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
 
 ```json
