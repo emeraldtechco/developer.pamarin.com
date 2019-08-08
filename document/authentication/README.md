@@ -17,6 +17,7 @@
    - `grant_type=authorization_code`
    - `grant_type=refresh_token`
 - `/oauth/session`
+- `/oauth/signout`  
 
 # Flow
 - [Authorization Code](#authorization-code)
