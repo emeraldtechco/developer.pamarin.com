@@ -153,5 +153,4 @@ Response Body
 ```
 
 - ### Step 7.1.1)
-Client / Resource Server จัดเก็บ `access_token` + `refresh_token` ใหม่ (โดยการ `Set-cookie` กลับไปใน http response ของ browser)     
-รวมทั้งเช็คสิทธิ์ตามข้อมูล `user_session` ที่ระบบ authen ส่งมาให้ 
+Client / Resource Server จัดเก็บ `access_token` + `refresh_token` ใหม่ (โดยการ `Set-cookie` กลับไปใน http response ของ browser) รวมทั้งเช็คสิทธิ์ตามข้อมูล `user_session` ที่ระบบ authen ส่งมาให้ 
