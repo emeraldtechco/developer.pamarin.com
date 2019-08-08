@@ -154,3 +154,9 @@ Response Body
 
 - ### Step 7.1.1)
 Client / Resource Server จัดเก็บ `access_token` + `refresh_token` ใหม่ (โดยการ `Set-Cookie` กลับไปใน http response ของ browser) รวมทั้งเช็คสิทธิ์ (authorities) ตามข้อมูล `user_session` ที่ระบบ authen (Authorization Server) ส่งมาให้ 
+
+- ### Step 7.1.1.1)   
+ถ้าไม่มีสิทธิ์เข้าถึง Client / Resource Server จะ return error (`access denied`) กลับไปหา user  
+
+- ### Step 7.1.1.2) 
+ถ้ามีสิทธิ์เข้าถึง Client / Resource Server จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา
