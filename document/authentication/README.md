@@ -276,7 +276,7 @@ Response Body
 ### Step 18.1.1) - Client / Resource Server 
 รับ error message จากข้อ 18.1 แล้ว return error ต่อกลับไปหา user (อาจจะแสดงในรูปแบบ ui ที่สวยงาม)  
 
-### Step 18.2) 
+### Step 18.2) - Authorization Server
 กรณีที่ verify request ผ่าน ระบบจะ generate `access_token`, `refresh_token` ข้อมูล `session_token` เป็น jwt กลับไปให้ในรูปแบบ json
    
 Response Body
@@ -289,3 +289,7 @@ Response Body
     "session_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uLnVzZXIuaWQiO.."     
 }
 ```
+
+### 18.2.1) - Client / Resource Server   
+จัดเก็บ `access_token` / `refresh_token` ไว้ (ด้วยการ Set-Cookie ไปกับ Browser Response)    
+รวมทั้ง verify `session_token` ด้วย public key และเช็คสิทธิ์ (authorities) ตามข้อมูล `session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้
