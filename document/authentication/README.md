@@ -292,6 +292,14 @@ Response Body
 }
 ```
 
-### 18.2.1) - Client / Resource Server   
-จัดเก็บ `access_token` / `refresh_token` ไว้ (ด้วยการ Set-Cookie ไปกับ Browser Response)    
+### Step 18.2.1) - Client / Resource Server   
+จัดเก็บ `access_token` / `refresh_token` ไว้ (ด้วยการ `Set-Cookie` ไปกับ Browser Response)    
 รวมทั้ง verify `session_token` ด้วย public key และเช็คสิทธิ์ (authorities) ตามข้อมูล `session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้
+
+### Step 18.2.1.1) - Client / Resource Server
+ถ้าไม่มีสิทธิ์เข้าถึง จะ return error (`access denied`) กลับไปหา user  
+
+### Step 18.2.1.2) - Client / Resource Server  
+ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user  
+  
+วนกลับไปข้อ 1 ใหม่  
