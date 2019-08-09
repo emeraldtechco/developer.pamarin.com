@@ -224,8 +224,8 @@ redirect_uri?code=xxx&state=yyy
 ถ้า username หรือ password ที่ส่งไปไม่ถูกต้อง (invalid)     
 จะมีข้อความว่า `username หรือ password ไม่ถูกต้อง` แสดงที่หน้าจอ login 
 
-### Step 14.2) 
-ถ้า username หรือ password ถูกต้อง (valid) ระบบจะ generate authorization_code กลับไปทาง 
+### Step 14.2) - Authorization Server
+ถ้า `username` หรือ `password` ถูกต้อง (valid) ระบบจะ generate authorization_code กลับไปทาง 
 ```
 redirect_uri?code=xxx&state=yyy
 ```
