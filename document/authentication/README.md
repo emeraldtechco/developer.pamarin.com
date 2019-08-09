@@ -163,7 +163,9 @@ Response Body
 ```
 
 - ### Step 8) - Client / Resource Server  
-redirect ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)
+redirect http (302) ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)  
+โดยทำการกำหนด querystring : response_type=code, client_id, redirect_uri, scope   
+และ random state=yyy จัดเก็บไว้ พร้อมทั้งแนบไปด้วย
 
 - ### Step 9) - Authorization Server : `/oauth/authorize`
 ทำการ verify request โดยตรวจสอบ `response_type`, `client_id`, `redirect_uri`,
