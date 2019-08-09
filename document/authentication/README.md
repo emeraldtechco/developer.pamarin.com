@@ -38,7 +38,7 @@
 # Step
 
 - ### Step 1) - User / Browser     
-พยายามเข้าใช้งาน หรือ ร้องขอ Resource จาก `www.pamarin.com` ผ่านทาง browser      
+พยายามเข้าใช้งาน หรือ ร้องขอ Resource จาก `www.pamarin.com` (Client / Resource Server) ผ่านทาง browser      
 โดย browser จะแนบ http cookie : `access_token` / `refresh_token` ไปพร้อมกับ request  
   
 - ### Step 2) - Client / Resource Server  
@@ -116,7 +116,7 @@ refresh_token : $REFRESH_TOKEN
 *** หมายเหตุ : ถ้าไม่มี `refresh_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 8 เลย 
 
 - ### Step 6) - Authorization Server : `/oauth/token`   
-ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
+ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่  
 พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถูกต้อง มีสิทธิ์ขอ `access_token` ใหม่หรือไม่ 
 
 - ### Step 7.1) - Authorization Server
