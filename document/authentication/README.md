@@ -98,7 +98,7 @@ Response Body
 - ### Step 5)  
 นำ `refresh_token` มา build http post (ต่อจาก 4.2)  
 เพื่อขอ `access_token` ใหม่  
-ส่งไปที่ `authen.pamarin.com/oauth/token` (grant_type=refresh_token)  
+ส่งไปที่ Authorization Server  `/oauth/token` (grant_type=refresh_token)  
   
 Http headers  
 ```
@@ -115,8 +115,8 @@ refresh_token : $REFRESH_TOKEN
 ```
 *** หมายเหตุ : ถ้าไม่มี `refresh_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 8 เลย 
 
-- ### Step 6) - endpoint : `/oauth/token`   
-Authorization Server ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
+- ### Step 6) - Authorization Server : `/oauth/token`   
+ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
 พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถูกต้อง มีสิทธิ์ขอ `access_token` ใหม่หรือไม่ 
 
 - ### Step 7.1) 
