@@ -276,3 +276,16 @@ Response Body
 ### Step 18.1.1) - Client / Resource Server 
 รับ error message จากข้อ 18.1 แล้ว return error ต่อกลับไปหา user (อาจจะแสดงในรูปแบบ ui ที่สวยงาม)  
 
+### Step 18.2) 
+กรณีที่ verify request ผ่าน ระบบจะ generate `access_token`, `refresh_token` ข้อมูล `session_token` เป็น jwt กลับไปให้ในรูปแบบ json
+   
+Response Body
+```json
+{
+    "access_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlN...",
+    "token_type" : "bearer",
+    "expries_in" : 1800,
+    "refresh_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlNW...",
+    "session_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uLnVzZXIuaWQiO.."     
+}
+```
