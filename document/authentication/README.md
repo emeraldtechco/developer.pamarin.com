@@ -68,15 +68,15 @@ Response Body
 } 
 ```
 
-- ### Step 4.1.1) 
-Client / Resource Server จะเช็คสิทธิ์ (authorities) ตามข้อมูล 
-`user_session` ที่ระบบ authen (Authorization Server) ส่งมาให้  
+- ### Step 4.1.1) - Client / Resource Server
+ทำการ verify `session_token` ด้วย public key จากนั้นเช็คสิทธิ์ (authorities) ตามข้อมูล 
+`session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้  
 
-- ### Step 4.1.1.1) 
-ถ้าไม่มีสิทธิ์เข้าถึง Client / Resource Server จะ return error (`access denied`) กลับไปหา user   
+- ### Step 4.1.1.1) - Client / Resource Server
+ถ้าไม่มีสิทธิ์เข้าถึง จะ return error (`access denied`) กลับไปหา user   
 
-- ### Step 4.1.1.2) 
-ถ้ามีสิทธิ์เข้าถึง Client / Resource Server จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา 
+- ### Step 4.1.1.2) - Client / Resource Server 
+ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา 
 
 - ### Step 4.2) 
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
