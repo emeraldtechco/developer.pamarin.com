@@ -43,7 +43,7 @@
   
 - ### Step 2) - Client / Resource Server  
 จะนำ `access_token` มา build http post   
-ส่งไปตรวจสอบที่ `/oauth/session`  
+ส่งไปตรวจสอบที่ Authorization Server `/oauth/session`  
   
 Http headers  
 ```
