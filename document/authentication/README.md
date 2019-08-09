@@ -33,6 +33,7 @@
 
 # Flow
 - [Authorization Code](#authorization-code)
+- [Forwarding Authentication](#forwarding-authentication)
 - [Signout](#signout)
 
 # Authorization Code
@@ -304,6 +305,10 @@ Http Response Body
 ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user  
   
 วนกลับไปข้อ 1 ใหม่  
+
+# Forwarding Authentication
+
+![forward-authentication.svg](./forward-authentication.svg)
 
 # Signout
 
