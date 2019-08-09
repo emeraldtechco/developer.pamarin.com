@@ -256,8 +256,8 @@ code : $AUTHORIZATION_CODE
 ทำการ verify request ตรวจสอบ `code`, `client_id` / `client_scret` และ `user_session` login  
 
 ### Step 18.1) 
-กรณีที่ verify request ไม่ผ่าน  
-จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
+กรณีที่ verify request ไม่ผ่าน  (`code` หรือ `user_session` invalid)
+จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))  
   
 Response Body  
 ```json
