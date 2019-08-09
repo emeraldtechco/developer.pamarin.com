@@ -37,8 +37,9 @@
 
 # Step
 
-- ### Step 1) 
-User พยายามเข้าใช้งาน `www.pamarin.com` (มองเป็น Client / Resource Server) ผ่านทาง browser      
+- ### Step 1)   
+`Client / Resource Server`    
+User พยายามเข้าใช้งาน หรือ ร้องขอ Resource จาก `www.pamarin.com` ผ่านทาง browser      
 โดย browser จะแนบ http cookie : `access_token` / `refresh_token` ไปพร้อมกับ request  
   
 - ### Step 2) 
