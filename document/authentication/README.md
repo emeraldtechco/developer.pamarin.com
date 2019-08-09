@@ -144,10 +144,10 @@ Authorization Server จะ return `access_token`, `refresh_token` ใหม่ 
 Response Body
 ```json
 {
-    "access_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlNWM2ZDBkOjE1NjUyNzYxOTg3NDU6M2I2ZmQ4YzI3YmQ2NDhhYmZmYjFjMDY2NDUxMmU0NGE2N2E3NmQ3MTEwYWIxZGFlNDU1NmFlNzJhYWFhZDBiMw==",
+    "access_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlN...",
     "token_type" : "bearer",
     "expries_in" : 1800,
-    "refresh_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlNWM2ZDBkOjE1NjUyODUxOTg3NTA6YTlmOTAzYWEwMmE5M2YwMzY3Y2Y2MzI4YzgwOWE5YWIxZDg3MWZmZTQ2NmE0Y2MzOGU0ZWNkOWViZjFlODg0MA==",
+    "refresh_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlNW...",
     "session" : {
         "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
         "issuedAt": 1565197615855,
