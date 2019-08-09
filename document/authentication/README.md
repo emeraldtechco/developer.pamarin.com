@@ -192,7 +192,7 @@ redirect_uri?code=xxx&state=yyy
 เมื่อได้หน้า login / signin แล้ว user จะทำการกรอก `username` / `password` (ต่อจาก 10.3)
 
 - ### Step 12) - User / Browser
-จากนั้นกดปุ่ม login / เข้าสู่ระบบ 
+จากนั้น user กดปุ่ม login / เข้าสู่ระบบ 
 
 - ### Step 13) - Authorization Server 
 จะทำการตรวจสอบ `username` / `password` ที่เก็บไว้ใน database 
