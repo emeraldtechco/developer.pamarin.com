@@ -24,6 +24,12 @@
 - ทุก ๆ Client / Resource Server จะต้องลงทะเบียน Application เพื่อขอรับ `client_id` และ `client_secret` ก่อน 
 - ทุก ๆ Client / Resource Server จะต้อง Download Public Key มาไว้ เพื่อใช้สำหรับ Verify `session_token` ที่ Authorization Server sign มาให้   
 
+# Token
+การใช้งาน APIs ต่าง ๆ ของ Pamarin จะประกอบด้วย token 3 ประเภท ได้แก่  
+- `session_token` เป็น token ที่ใช้แทนข้อมูล login session ของ user เป็นแบบ stateless ใช้ jwt (Json Web Token) ซึ่ง Authorization Server จะ sign ด้วย private key มาให้ ข้อมูลต่าง ๆ ของ user เช่น ชื่อ, สิทธิ์ (authorities), ข้อมูล client ที่ทำการ login จะเก็บไว้ใน token นี้ มีอายุ 1 นาที  
+- `access_token` เป็น token แบบ stateful คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server ใช้สำหรับขอเข้าถึง Resources หรือ Apis ต่าง ๆ ของระบบ มีอายุ 30 นาที 
+- `refresh_token` เป็น token แบบ stateful เหมือน `access_token` คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server เช่นเดียวกัน ใช้สำหรับขอ `access_token` ใหม่ กรณีที่ `access_token` หมดอายุ (expired) มีอายุ 3 วัน   
+
 # Endpoint
 
 > https://authen.pamarin.com
