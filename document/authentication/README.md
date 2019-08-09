@@ -37,11 +37,11 @@
 
 # Step
 
-- ### Step 1) - User / Browser     
+### Step 1) - User / Browser     
 พยายามเข้าใช้งาน หรือ ร้องขอ Resource จาก `www.pamarin.com` (Client / Resource Server) ผ่านทาง browser      
 โดย browser จะแนบ http cookie : `access_token` / `refresh_token` ไปพร้อมกับ request  
   
-- ### Step 2) - Client / Resource Server  
+### Step 2) - Client / Resource Server  
 จะนำ `access_token` มา build http post   
 ส่งไปตรวจสอบที่ Authorization Server `/oauth/session`  
   
@@ -53,11 +53,11 @@ Authorization : Bearer $ACCESS_TOKEN
 ```
 *** หมายเหตุ : ถ้าไม่มี `access_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 5 เลย 
 
-- ### Step 3) - Authorization Server : `/oauth/session`  
+### Step 3) - Authorization Server : `/oauth/session`  
 จะทำการ verify `access_token` และ `user_session` 
 ที่เก็บไว้ใน data store (redis) ว่ายัง valid อยู่หรือไม่   
 
-- ### Step 4.1) - Authorization Server
+### Step 4.1) - Authorization Server
 ถ้า `access_token` และ `user_session` ยัง valid อยู่    
 จะ return `session_token` เป็น jwt กลับมาให้ในรูปแบบ json
   
@@ -68,7 +68,7 @@ Response Body
 } 
 ```
 
-- ### Step 4.1.1) - Client / Resource Server
+### Step 4.1.1) - Client / Resource Server
 ทำการ verify `session_token` ด้วย public key จากนั้นเช็คสิทธิ์ (authorities) ตามข้อมูล 
 `session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้  
    
@@ -79,14 +79,14 @@ Response Body
     "issuedAt": 1565197615855, 
     "expiresAt": 1565199415855,
     "user": {
-        "id": "5cff55864ca1bc12305164ba", //user id
+        "id": "5cff55864ca1bc12305164ba", 
 	"name": "Mr. User Test",
 	"authorities": [
 	    "ADMIN"
 	]
     },
     "client": {
-        "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a", //client id
+        "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a",
 	"name": "OAuth2 Test Application",
 	"scopes": [
 	    "user:public_profile"
@@ -95,13 +95,13 @@ Response Body
 }
 ```
 
-- ### Step 4.1.1.1) - Client / Resource Server
+### Step 4.1.1.1) - Client / Resource Server
 ถ้าไม่มีสิทธิ์เข้าถึง จะ return error (`access denied`) กลับไปหา user   
 
-- ### Step 4.1.1.2) - Client / Resource Server 
+### Step 4.1.1.2) - Client / Resource Server 
 ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา 
 
-- ### Step 4.2) - Authorization Server  
+### Step 4.2) - Authorization Server  
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
   
@@ -118,7 +118,7 @@ Response Body
     "state": null
 }
 ```
-- ### Step 5) - Client / Resource Server   
+### Step 5) - Client / Resource Server   
 นำ `refresh_token` มา build http post (ต่อจาก 4.2)  
 เพื่อขอ `access_token` ใหม่  
 ส่งไปที่ Authorization Server  `/oauth/token` (grant_type=refresh_token)  
@@ -138,11 +138,11 @@ refresh_token : $REFRESH_TOKEN
 ```
 *** หมายเหตุ : ถ้าไม่มี `refresh_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 8 เลย 
 
-- ### Step 6) - Authorization Server : `/oauth/token`   
+### Step 6) - Authorization Server : `/oauth/token`   
 ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่  
 พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถูกต้อง มีสิทธิ์ขอ `access_token` ใหม่หรือไม่ 
 
-- ### Step 7.1) - Authorization Server
+### Step 7.1) - Authorization Server
 ถ้า `refresh_token` และ `user_session` valid
 จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `session_token` เป็น jwt กลับไปในรูปแบบ json
   
@@ -157,17 +157,17 @@ Response Body
 }
 ```
 
-- ### Step 7.1.1) - Client / Resource Server
+### Step 7.1.1) - Client / Resource Server
 จัดเก็บ `access_token` + `refresh_token` ใหม่ (set-cookie) รวมทั้ง verify `session_token` ด้วย public key   
 และเช็คสิทธิ์ (authorities) ตามข้อมูล `session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้
 
-- ### Step 7.1.1.1) - Client / Resource Server   
+### Step 7.1.1.1) - Client / Resource Server   
 ถ้าไม่มีสิทธิ์เข้าถึง จะ return error (`access denied`) กลับไปหา user  
 
-- ### Step 7.1.1.2) - Client / Resource Server  
+### Step 7.1.1.2) - Client / Resource Server  
 ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา
 
-- ### Step 7.2) - Authorization Server  
+### Step 7.2) - Authorization Server  
 ถ้า `refresh_token` หรือ `user_session` invalid  (ไม่ valid)   
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
   
@@ -185,21 +185,21 @@ Response Body
 }
 ```
 
-- ### Step 8) - Client / Resource Server  
+### Step 8) - Client / Resource Server  
 redirect http (302) ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)  
 โดยทำการกำหนด querystring : `response_type=code`, `client_id`, `redirect_uri`, `scope`   
 และ random `state=yyy` จัดเก็บไว้ พร้อมทั้งแนบไปด้วย (ไว้ป้องกัน CSRF : Cross-Site Request Forgery)
 
-- ### Step 9) - Authorization Server : `/oauth/authorize`
+### Step 9) - Authorization Server : `/oauth/authorize`
 ทำการ verify request โดยตรวจสอบ `response_type`, `client_id`, `redirect_uri`,
 `scope` และเช็ค `user_session` login
 
-- ### Step 10.1) - Authorization Server  
+### Step 10.1) - Authorization Server  
 ถ้า verify request ไม่ผ่าน จะได้ error กลับไปทาง 
 ```
 redirect_uri?error=xxx&error_status=yyy&error_description=zzz...
 ```
-- ### Step 10.2) - Authorization Server  
+### Step 10.2) - Authorization Server  
 ถ้า verify ผ่าน `และ` user ได้เคย login/signin ไปแล้ว 
 ระบบจะ generate authorization_code กลับไปทาง 
 ```
@@ -207,19 +207,19 @@ redirect_uri?code=xxx&state=yyy
 ```
 จากนั้น ไปต่อที่ข้อ 15 เลย
 
--  ### Step 10.3) - Authorization Server   
+### Step 10.3) - Authorization Server   
 ถ้า verify ผ่าน `แต่` user ยังไม่ได้ทำการ login เข้าสู่ระบบ
 จะได้หน้า Authorization Server `/oauth/signin` กลับไปหา user 
 
-- ### Step 11) - User / Browser
+### Step 11) - User / Browser
 เมื่อได้หน้า login / signin แล้ว user จะทำการกรอก `username` / `password` (ต่อจาก 10.3)
 
-- ### Step 12) - User / Browser
+### Step 12) - User / Browser
 จากนั้น user กดปุ่ม login / เข้าสู่ระบบ 
 
-- ### Step 13) - Authorization Server 
+### Step 13) - Authorization Server 
 จะทำการตรวจสอบ `username` / `password` ที่เก็บไว้ใน database 
 
-- ### Step 14) - Authorization Server
+### Step 14) - Authorization Server
 ถ้า username หรือ password ที่ส่งไปไม่ถูกต้อง (invalid)     
 จะมีข้อความว่า `username หรือ password ไม่ถูกต้อง` แสดงที่หน้าจอ login 
