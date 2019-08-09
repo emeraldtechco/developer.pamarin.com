@@ -255,8 +255,8 @@ code : $AUTHORIZATION_CODE
 ### Step 17) - Authorization Server : `/oauth/token` 
 ทำการ verify request ตรวจสอบ `code`, `client_id` / `client_scret` และ `user_session` login  
 
-### Step 18.1) 
-กรณีที่ verify request ไม่ผ่าน  (`code` หรือ `user_session` invalid)
+### Step 18.1) - Authorization Server  
+กรณีที่ verify request ไม่ผ่าน  (`code` หรือ `user_session` invalid)  
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))  
   
 Response Body  
@@ -272,4 +272,7 @@ Response Body
     "state": null
 }
 ```
+
+### Step 18.1.1) - Client / Resource Server 
+รับ error message จากข้อ 18.1 แล้ว return error ต่อกลับไปหา user (อาจจะแสดงในรูปแบบ ui ที่สวยงาม)  
 
