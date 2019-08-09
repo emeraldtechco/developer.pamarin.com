@@ -160,6 +160,7 @@ Response Body
     "error_fields": [],
     "state": null
 }
+```
 
 - ### Step 8) - Client / Resource Server  
 redirect ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)
