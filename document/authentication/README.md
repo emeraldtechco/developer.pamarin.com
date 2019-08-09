@@ -198,4 +198,5 @@ redirect_uri?code=xxx&state=yyy
 จะทำการตรวจสอบ `username` / `password` ที่เก็บไว้ใน database 
 
 - ### Step 14) - Authorization Server
-ถ้า username หรือ password ที่ส่งไปไม่ถูกต้อง invalid username or password จะแสดงข้อความว่า `username / password ไม่ถูกต้อง` ที่หน้าจอ login 
+ถ้า username หรือ password ที่ส่งไปไม่ถูกต้อง (invalid)     
+จะมีข้อความว่า `username หรือ password ไม่ถูกต้อง` แสดงที่หน้าจอ login 
