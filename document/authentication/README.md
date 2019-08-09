@@ -176,7 +176,7 @@ redirect http (302) ไปที่  Authorization Server `/oauth/authorize` (�
 ```
 redirect_uri?error=xxx&error_status=yyy&error_description=zzz...
 ```
-- ### Step 10.2 - Authorization Server  
+- ### Step 10.2) - Authorization Server  
 ถ้า verify ผ่าน และ user ได้เคย login/signin ไปแล้ว 
 ระบบจะ generate authorization_code กลับไปทาง 
 ```
