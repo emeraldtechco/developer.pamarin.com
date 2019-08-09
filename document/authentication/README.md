@@ -252,3 +252,5 @@ grant_type : authorization_code
 redirect_uri : ""
 code : $AUTHORIZATION_CODE    
 ```
+### Step 17) - Authorization Server : `/oauth/token` 
+ทำการ verify request ตรวจสอบ `code`, `client_id` / `client_scret` และ `user_session` login  
