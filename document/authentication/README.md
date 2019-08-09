@@ -170,3 +170,9 @@ redirect http (302) ไปที่  Authorization Server `/oauth/authorize` (�
 - ### Step 9) - Authorization Server : `/oauth/authorize`
 ทำการ verify request โดยตรวจสอบ `response_type`, `client_id`, `redirect_uri`,
 `scope` และเช็ค `user_session` login
+
+- ### Step 10) - Authorization Server  
+ถ้า verify request ไม่ผ่าน จะได้ error กลับไปทาง 
+```
+redirect_uri?error=xxx&error_status=yyy&error_description=zzz...
+```
