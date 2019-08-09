@@ -147,8 +147,19 @@ Response Body
 - ### Step 7.2) - Authorization Server  
 ถ้า `refresh_token` หรือ `user_session` invalid  (ไม่ valid)   
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
-
-> error เหมือนข้อ 4.2 
+  
+Response Body  
+```json
+{
+    "error": "unauthorized_client",
+    "error_status": 401,
+    "error_description": null,
+    "error_timestamp": 1565198086100,
+    "error_uri": "https://developer.pamarin.com/document/error/",
+    "error_code": "eb7852128224cb93",
+    "error_fields": [],
+    "state": null
+}
 
 - ### Step 8) - Client / Resource Server  
 redirect ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)
