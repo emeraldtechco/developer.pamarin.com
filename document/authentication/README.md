@@ -254,3 +254,22 @@ code : $AUTHORIZATION_CODE
 ```
 ### Step 17) - Authorization Server : `/oauth/token` 
 ทำการ verify request ตรวจสอบ `code`, `client_id` / `client_scret` และ `user_session` login  
+
+### Step 18.1) 
+กรณีที่ verify request ไม่ผ่าน  
+จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
+  
+Response Body  
+```json
+{
+    "error": "unauthorized_client",
+    "error_status": 401,
+    "error_description": null,
+    "error_timestamp": 1565198086100,
+    "error_uri": "https://developer.pamarin.com/document/error/",
+    "error_code": "eb7852128224cb93",
+    "error_fields": [],
+    "state": null
+}
+```
+
