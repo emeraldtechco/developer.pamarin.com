@@ -220,9 +220,15 @@ redirect_uri?code=xxx&state=yyy
 ### Step 13) - Authorization Server 
 จะทำการตรวจสอบ `username` / `password` ที่เก็บไว้ใน database 
 
-### Step 14) - Authorization Server
+### Step 14.1) - Authorization Server
 ถ้า username หรือ password ที่ส่งไปไม่ถูกต้อง (invalid)     
 จะมีข้อความว่า `username หรือ password ไม่ถูกต้อง` แสดงที่หน้าจอ login 
+
+### Step 14.2) 
+ถ้า username หรือ password ถูกต้อง (valid) ระบบจะ generate authorization_code กลับไปทาง 
+```
+redirect_uri?code=xxx&state=yyy
+```
 
 ### Step 15) - Browser  
 browser get & send `code=xxx&state=yyy`
