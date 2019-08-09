@@ -48,7 +48,7 @@
 จะนำ `access_token` มา build http post   
 ส่งไปตรวจสอบที่ Authorization Server `/oauth/session`  
   
-Http headers  
+Http Request headers  
 ```
 Request Method : POST
 Content-Type : application/x-www-form-urlencoded
@@ -64,7 +64,7 @@ Authorization : Bearer $ACCESS_TOKEN
 ถ้า `access_token` และ `user_session` ยัง valid อยู่    
 จะ return `session_token` เป็น jwt กลับมาให้ในรูปแบบ json
   
-Response Body    
+Http Response Body    
 ```json
 {
     "session_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uLnVzZXIuaWQiO.."     
@@ -108,7 +108,7 @@ Response Body
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
   
-Response Body  
+Http Response Body  
 ```json
 {
     "error": "unauthorized_client",
@@ -126,12 +126,12 @@ Response Body
 เพื่อขอ `access_token` ใหม่  
 ส่งไปที่ Authorization Server  `/oauth/token` (grant_type=refresh_token)  
   
-Http headers  
+Http Request headers  
 ```
 Request Method : POST
 Content-Type : application/x-www-form-urlencoded  
 ```
-Http Body
+Http Request Body
 ```
 client_id : $CLIENT_ID  
 client_secret : $CLIENT_SECRET  
@@ -149,7 +149,7 @@ refresh_token : $REFRESH_TOKEN
 ถ้า `refresh_token` และ `user_session` valid
 จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `session_token` เป็น jwt กลับไปในรูปแบบ json
   
-Response Body
+Http Response Body
 ```json
 {
     "access_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlN...",
@@ -174,7 +174,7 @@ Response Body
 ถ้า `refresh_token` หรือ `user_session` invalid  (ไม่ valid)   
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
   
-Response Body  
+Http Response Body  
 ```json
 {
     "error": "unauthorized_client",
@@ -242,12 +242,12 @@ browser get & send `code=xxx&state=yyy`
 จากนั้น build http post ด้วย parameters `client_id`, `client_secret`, `code`, `grant_type=authorization_code`  
 ส่ง request ไปขอ `access_token`, `refresh_token` + ข้อมูล `session_token` ที่ Authorization Server `/oauth/token`  
   
-Http Headers
+Http Request Headers
 ```
 Request Method : POST
 Content-Type : application/x-www-form-urlencoded  
 ```
-HTTP Body
+HTTP Request Body
 ```
 client_id : $CLIENT_ID  
 client_secret : $CLIENT_SECRET  
@@ -262,7 +262,7 @@ code : $AUTHORIZATION_CODE
 กรณีที่ verify request ไม่ผ่าน  (`code` หรือ `user_session` invalid)  
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))  
   
-Response Body  
+Http Response Body  
 ```json
 {
     "error": "unauthorized_client",
@@ -282,7 +282,7 @@ Response Body
 ### Step 18.2) - Authorization Server
 กรณีที่ verify request ผ่าน ระบบจะ generate `access_token`, `refresh_token` ข้อมูล `session_token` เป็น jwt กลับไปให้ในรูปแบบ json
    
-Response Body
+Http Response Body
 ```json
 {
     "access_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlN...",
@@ -307,9 +307,9 @@ Response Body
 
 # Signout
 
-ให้ build http post ยิง request มาที่ Authorization Server `/oauth/signout` 
+ถ้าต้องการออกจากระบบ ให้ build http post ยิง request มาที่ Authorization Server `/oauth/signout` 
    
-Http headers  
+Http Request headers   
 ```
 Request Method : POST
 Content-Type : application/x-www-form-urlencoded
