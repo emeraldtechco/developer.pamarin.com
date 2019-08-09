@@ -149,3 +149,6 @@ Response Body
 จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
 
 > error เหมือนข้อ 4.2 
+
+- ### Step 8) - Client / Resource Server  
+redirect ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)
