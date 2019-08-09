@@ -33,7 +33,7 @@
 - [Authorization Code](#authorization-code)
 
 # Authorization Code
-![authentication.svg](./authentication.svg)
+![authentication-flow.svg](./authentication-flow.svg)
 
 # Step
 
