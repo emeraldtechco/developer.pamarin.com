@@ -119,9 +119,9 @@ refresh_token : $REFRESH_TOKEN
 ทำการ verify request โดยตรวจสอบ `refresh_token` และ `user_session` ว่ายังคง valid อยู่หรือไม่
 พร้อมทั้งตรวจสอบ `client_id` กับ `client_secret` ว่าถูกต้อง มีสิทธิ์ขอ `access_token` ใหม่หรือไม่ 
 
-- ### Step 7.1) 
-ถ้า `refresh_token` และ `user_session` valid  
-Authorization Server จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `user_session` กลับไปในรูปแบบ json  
+- ### Step 7.1) - Authorization Server
+ถ้า `refresh_token` และ `user_session` valid
+จะ return `access_token`, `refresh_token` ใหม่ + ข้อมูล `session_token` เป็น jwt กลับไปในรูปแบบ json
   
 Response Body
 ```json
@@ -134,11 +134,12 @@ Response Body
 }
 ```
 
-- ### Step 7.1.1)
-Client / Resource Server จัดเก็บ `access_token` + `refresh_token` ใหม่ (โดยการ `Set-Cookie` กลับไปใน http response ของ browser) รวมทั้งเช็คสิทธิ์ (authorities) ตามข้อมูล `user_session` ที่ระบบ authen (Authorization Server) ส่งมาให้ 
+- ### Step 7.1.1) - Client / Resource Server
+จัดเก็บ `access_token` + `refresh_token` ใหม่ (set-cookie) รวมทั้ง verify `session_token` ด้วย public key   
+และเช็คสิทธิ์ (authorities) ตามข้อมูล `session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้
 
-- ### Step 7.1.1.1)   
-ถ้าไม่มีสิทธิ์เข้าถึง Client / Resource Server จะ return error (`access denied`) กลับไปหา user  
+- ### Step 7.1.1.1) - Client / Resource Server   
+ถ้าไม่มีสิทธิ์เข้าถึง จะ return error (`access denied`) กลับไปหา user  
 
-- ### Step 7.1.1.2) 
-ถ้ามีสิทธิ์เข้าถึง Client / Resource Server จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา
+- ### Step 7.1.1.2) - Client / Resource Server  
+ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา
