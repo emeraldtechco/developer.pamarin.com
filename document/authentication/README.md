@@ -309,8 +309,7 @@ Http Response Body
 # Forwarding Authentication
 
 เป็นการ forward ข้อมูล authen ไปยัง Resource Server อื่น ๆ ต่อ   
-ทำให้ Resource Server นั้น ๆ ไม่ต้องทำการ authen ใหม่อีกครั้ง สามารถใช้ `session_token` จาก request ที่ส่งไปในการเช็คสิทธิ์ (authorities) ต่าง ๆ ได้เลย    
-ลองอ่านบทความนี้ดู [[บันทึกส่วนตัว] : การออกแบบ ระบบ authentication ของ micro service](https://medium.com/@jittagornp/%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%A7-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A-%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A-authentication-%E0%B8%82%E0%B8%AD%E0%B8%87-micro-service-c08bfea025ef)
+ทำให้ Resource Server นั้น ๆ ไม่ต้องทำการ authen ใหม่อีกครั้ง สามารถใช้ `session_token` จาก request ที่ส่งไปในการเช็คสิทธิ์ (authorities) ต่าง ๆ ได้เลย ลองอ่านบทความนี้ดู [[บันทึกส่วนตัว] : การออกแบบ ระบบ authentication ของ micro service](https://medium.com/@jittagornp/%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%A7-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A-%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A-authentication-%E0%B8%82%E0%B8%AD%E0%B8%87-micro-service-c08bfea025ef)
   
 ![forward-authentication.svg](./forward-authentication.svg)
 
