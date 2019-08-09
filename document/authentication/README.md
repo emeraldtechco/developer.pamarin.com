@@ -64,25 +64,7 @@ Authoriation Server จะทำการ verify `access_token` และ `user_
 Response Body    
 ```json
 {
-    "session" : {
-        "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
-        "issuedAt": 1565197615855,
-        "expiresAt": 1565199415855,
-        "user": {
-            "id": "5cff55864ca1bc12305164ba",
-            "name": "นาย สมชาย ใจดี",
-            "authorities": [
-                "ADMIN"
-            ]
-        },
-        "client": {
-            "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a",
-            "name": "OAuth2 Test Application",
-            "scopes": [
-                "user:public_profile"
-            ]
-        }
-    }
+    "session_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uLnVzZXIuaWQiO.."     
 } 
 ```
 
@@ -148,25 +130,7 @@ Response Body
     "token_type" : "bearer",
     "expries_in" : 1800,
     "refresh_token" : "MjMwZDk5NTAtYzZkZC00Mjg2LTg2ODUtY2EzNGJlNW...",
-    "session" : {
-        "id": "df1434aa-7b81-481f-9efa-e85eb39448cd",
-        "issuedAt": 1565197615855,
-        "expiresAt": 1565199415855,
-        "user": {
-            "id": "5cff55864ca1bc12305164ba",
-            "name": "นาย สมชาย ใจดี",
-            "authorities": [
-                "ADMIN"
-            ]
-        },
-        "client": {
-            "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a",
-            "name": "OAuth2 Test Application",
-            "scopes": [
-                "user:public_profile"
-            ]
-        }
-    }
+    "session_token" : "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzZXNzaW9uLnVzZXIuaWQiO.."     
 }
 ```
 
