@@ -33,6 +33,7 @@
 
 # Flow
 - [Authorization Code](#authorization-code)
+- [Signout](#signout)
 
 # Authorization Code
 ![authentication.svg](./authentication.svg)
@@ -303,3 +304,14 @@ Response Body
 ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user  
   
 วนกลับไปข้อ 1 ใหม่  
+
+# Signout
+
+ให้ build http post ยิง request มาที่ Authorization Server `/oauth/signout` 
+   
+Http headers  
+```
+Request Method : POST
+Content-Type : application/x-www-form-urlencoded
+Authorization : Bearer $ACCESS_TOKEN  
+```
