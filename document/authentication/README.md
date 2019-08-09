@@ -161,7 +161,7 @@ Http Response Body
 ```
 
 ### Step 7.1.1) - Client / Resource Server
-จัดเก็บ `access_token` + `refresh_token` ใหม่ (set-cookie) รวมทั้ง verify `session_token` ด้วย public key   
+จัดเก็บ `access_token` + `refresh_token` ใหม่ (`Set-Cookie`) รวมทั้ง verify `session_token` ด้วย public key   
 และเช็คสิทธิ์ (authorities) ตามข้อมูล `session_token` ที่ระบบ authen (Authorization Server) ส่งมาให้
 
 ### Step 7.1.1.1) - Client / Resource Server   
