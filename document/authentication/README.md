@@ -38,7 +38,7 @@
 
 # Authorization Code
 
-ใช้สำหรับการ Grant Authorize หรือ Signin เข้าสู่ระบบผ่าน Web Browser  
+ใช้สำหรับการ Grant Authorize หรือ Signin เข้าสู่ระบบ ผ่าน Web Browser  
    
 ![authentication.svg](./authentication.svg)
 
