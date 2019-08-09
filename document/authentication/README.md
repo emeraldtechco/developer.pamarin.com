@@ -152,3 +152,7 @@ Response Body
 
 - ### Step 8) - Client / Resource Server  
 redirect ไปที่  Authorization Server `/oauth/authorize` (ต่อจาก 7.2)
+
+- ### Step 9) - Authorization Server : `/oauth/authorize`
+ทำการ verify request โดยตรวจสอบ `response_type`, `client_id`, `redirect_uri`,
+`scope` และเช็ค `user_session` login
