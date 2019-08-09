@@ -184,9 +184,15 @@ redirect_uri?code=xxx&state=yyy
 ```
 จากนั้น ไปต่อที่ข้อ 15 เลย
 
--  ### 10.3) - Authorization Server   
+-  ### Step 10.3) - Authorization Server   
 ถ้า verify ผ่าน `แต่` user ยังไม่ได้ทำการ login เข้าสู่ระบบ
 จะได้หน้า Authorization Server `/oauth/signin` กลับไปหา user 
 
 - ### Step 11) - User / Browser
 เมื่อได้หน้า login / signin แล้ว user จะทำการกรอก `username` / `password` (ต่อจาก 10.3)
+
+- ### Step 12) - User / Browser
+จากนั้นกดปุ่ม login / เข้าสู่ระบบ 
+
+- ### Step 13) - Authorization Server 
+จะทำการตรวจสอบ `username` / `password` ที่เก็บไว้ใน database 
