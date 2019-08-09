@@ -8,7 +8,7 @@
 
 # Version
 
-> BETA 
+> 1.0   
 
 # อ้างอิง 
 - [RFC 6749 - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
