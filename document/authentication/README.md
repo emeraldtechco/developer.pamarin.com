@@ -95,7 +95,7 @@ Response Body
     "state": null
 }
 ```
-- ### Step 5)  
+- ### Step 5) - Client / Resource Server   
 นำ `refresh_token` มา build http post (ต่อจาก 4.2)  
 เพื่อขอ `access_token` ใหม่  
 ส่งไปที่ Authorization Server  `/oauth/token` (grant_type=refresh_token)  
@@ -187,3 +187,6 @@ redirect_uri?code=xxx&state=yyy
 -  ### 10.3) - Authorization Server   
 ถ้า verify ผ่าน `แต่` user ยังไม่ได้ทำการ login เข้าสู่ระบบ
 จะได้หน้า Authorization Server `/oauth/signin` กลับไปหา user 
+
+- ### Step 11) - User / Browser
+เมื่อได้หน้า login / signin แล้ว user จะทำการกรอก `username` / `password` (ต่อจาก 10.3)
