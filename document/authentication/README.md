@@ -1,6 +1,6 @@
 # การเข้าสู่ระบบ (Authentication)
 
-![oauth2.png](./oauth2.jpeg)
+<img src="oauth2.png" alt="oauth2.png" width="150"/>
 
 [www.pamarin.com](https://www.pamarin.com) ใช้วิธีการ Authen ด้วย OAuth 2.0 ซึ่งเป็น Standard Authorization Framework ตามข้อกำหนด RFC6749 ที่ทาง IETF (Internet Engineering Task Force) สร้างขึ้นในปี 2012 มีระบบดัง ๆ อย่าง Google, Facebook, Twitter, Youtube etc. ใช้ ทำให้ระบบต่าง ๆ สามารถเชื่อมต่อเข้ามายัง Pamarin เพื่อขอใช้งาน Resources หรือ APIs ต่าง ๆ ที่ทาง Pamarin ได้เตรียมไว้ให้ได้ โดยการปฏิบัติตามข้อกำหนดต่าง ๆ ตามเอกสารนี้  
 
