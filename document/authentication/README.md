@@ -78,9 +78,9 @@ Response Body
 - ### Step 4.1.1.2) - Client / Resource Server 
 ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา 
 
-- ### Step 4.2) 
+- ### Step 4.2) - Authorization Server  
 ถ้า `access_token` หรือ `user_session` invalid (ไม่ valid)   
-Authorization Server จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
+จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/)) 
   
 Response Body  
 ```json
@@ -143,3 +143,9 @@ Response Body
 
 - ### Step 7.1.1.2) - Client / Resource Server  
 ถ้ามีสิทธิ์เข้าถึง จะ return resource กลับไปหา user ตามคำร้องที่ browser ส่งมา
+
+- ### Step 7.2) - Authorization Server  
+ถ้า `refresh_token` หรือ `user_session` invalid  (ไม่ valid)   
+จะ return error กลับไปในรูปแบบ json ([คำอธิบาย error](./../error/))   
+
+> error เหมือนข้อ 4.2 
