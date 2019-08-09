@@ -223,3 +223,7 @@ redirect_uri?code=xxx&state=yyy
 ### Step 14) - Authorization Server
 ถ้า username หรือ password ที่ส่งไปไม่ถูกต้อง (invalid)     
 จะมีข้อความว่า `username หรือ password ไม่ถูกต้อง` แสดงที่หน้าจอ login 
+
+### Step 15) - Browser  
+browser get & send `code=xxx&state=yyy`
+ไปยัง Client / Resource Server (`www.pamarin.com`) (ต่อจาก 10.3 หรือ 14.2)
