@@ -345,7 +345,7 @@ Headers ของ Step นี้ จะเหมือน step 2 เพียง
 เมื่อ Resourcce Server ปลายทางได้รับ request แล้ว ก็จะนำ `session_token` ออกมา verify ด้วย public key   
 แล้วใช้ข้อมูลนี้เป็นข้อมูล session login ของ user ต่อไป 
    
-*** หมายเหตุ : Resource Server ตั้งแต่ลำดับที่ 2, 3, 4... จะทำงานแบบนี้ไปเรื่อย ๆ  
+*** หมายเหตุ : Resource Server ตั้งแต่ลำดับที่ 2, 3, 4... จะทำงานแบบนี้ไปเรื่อย ๆ (forward ข้อมูล authen ต่อเป็นทอด ๆ) 
 ซึ่งข้อดีของการทำแบบนี้คือ Resource Server แต่ละตัวไม่จำเป็นต้อง authen ใหม่ สามารถใช้ข้อมูล authen (`session_token`) ที่ระบบส่งไปให้ได้เลย ทำให้ลด Network Latency ของระบบลงไปได้เยอะมาก 
 
 Http Request headers  
