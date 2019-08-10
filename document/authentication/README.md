@@ -151,7 +151,6 @@ Http Request Body
 client_id : $CLIENT_ID  
 client_secret : $CLIENT_SECRET  
 grant_type : refresh_token  
-redirect_uri : ""
 refresh_token : $REFRESH_TOKEN  
 ```
 *** หมายเหตุ : ถ้าไม่มี `refresh_token` ส่งมาจาก browser จะกระโดดไปทำข้อ 8 เลย 
@@ -273,7 +272,7 @@ HTTP Request Body
 client_id : $CLIENT_ID  
 client_secret : $CLIENT_SECRET  
 grant_type : authorization_code 
-redirect_uri : ""
+redirect_uri : https://www.pamarin.com/oauth/callback
 code : $AUTHORIZATION_CODE    
 ```
 ### Step 17) - Authorization Server : `/oauth/token` 
