@@ -30,6 +30,8 @@
 - `access_token` เป็น token แบบ stateful (ไม่ใช้ jwt) คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server (sync redis) ใช้สำหรับขอเข้าถึง Resources หรือ Apis ต่าง ๆ ของระบบ มีอายุ 30 นาที 
 - `refresh_token` เป็น token แบบ stateful (ไม่ใช้ jwt) เหมือน `access_token` คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server เช่นเดียวกัน ใช้สำหรับขอ `access_token` ใหม่ กรณีที่ `access_token` หมดอายุ (expired) มีอายุ 3 วัน   
 
+*** เหตุผลว่าทำไมถึงใช้ ไม่ใช้ jwt ลองอ่านบทความประกอบดู
+
 # Endpoint
 
 > https://authen.pamarin.com
