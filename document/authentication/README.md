@@ -372,3 +372,6 @@ Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
 Authorization Server จะทำการ revoke token และ invalidate user session ทิ้ง  
+
+---
+หากพบ `issue` อะไรบนเอกสาร สามารถแจ้งได้ที่ [https://github.com/pamarin-official/developer.pamarin.com](https://github.com/pamarin-official/developer.pamarin.com)
