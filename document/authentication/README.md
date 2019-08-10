@@ -370,7 +370,7 @@ Request Method : POST
 Content-Type : application/x-www-form-urlencoded
 Authorization : Bearer $ACCESS_TOKEN  
 ```
-Authorization Server จะทำการ revoke token และ invalidate user session ทิ้ง  
+Authorization Server จะทำการ revoke token ทั้งหมดที่ผูกกับ user session และ invalidate user session ทิ้ง  
 
 ---
 หากพบปัญหาอะไรบนเอกสาร สามารถแจ้ง `issue` ได้ที่ [https://github.com/pamarin-official/developer.pamarin.com](https://github.com/pamarin-official/developer.pamarin.com)
