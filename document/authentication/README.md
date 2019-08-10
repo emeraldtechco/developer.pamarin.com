@@ -213,13 +213,17 @@ redirect http (302) ไปที่  Authorization Server `/oauth/authorize` (�
 `scope` และเช็ค `user_session` login
 
 ### Step 10.1) - Authorization Server  
-ถ้า verify request ไม่ผ่าน จะได้ error กลับไปทาง 
+ถ้า verify request ไม่ผ่าน จะได้ error กลับไปทาง   
+  
+Http Redirect (302)  
 ```
 redirect_uri?error=xxx&error_status=yyy&error_description=zzz...
 ```
 ### Step 10.2) - Authorization Server  
 ถ้า verify ผ่าน `และ` user ได้เคย login/signin ไปแล้ว 
-ระบบจะ generate authorization_code กลับไปทาง 
+ระบบจะ generate authorization_code กลับไปทาง   
+  
+Http Redirect (302)  
 ```
 redirect_uri?code=xxx&state=yyy
 ```
@@ -243,7 +247,9 @@ redirect_uri?code=xxx&state=yyy
 จะมีข้อความว่า `username หรือ password ไม่ถูกต้อง` แสดงที่หน้าจอ login 
 
 ### Step 14.2) - Authorization Server
-ถ้า `username` หรือ `password` ถูกต้อง (valid) ระบบจะ generate authorization_code กลับไปทาง 
+ถ้า `username` หรือ `password` ถูกต้อง (valid) ระบบจะ generate authorization_code กลับไปทาง   
+  
+Http Redirect (302)  
 ```
 redirect_uri?code=xxx&state=yyy
 ```
