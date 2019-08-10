@@ -352,7 +352,7 @@ Http Request headers
 ```
 Request Method : POST
 Content-Type : application/x-www-form-urlencoded
-Authorization : Bearer `$SESSION_TOKEN`  
+Authorization : Bearer $SESSION_TOKEN  
 ```
 
 # Signout
