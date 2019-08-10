@@ -259,7 +259,7 @@ browser get & send `code=xxx&state=yyy`
 
 ### Step 16) - Client / Resource Server 
 อ่าน parameter `code=xxx` และทำการ verify `state=yyy` ที่เคยเก็บไว้ตอนแรก (ในข้อ 8) ว่าผ่านหรือไม่ เพื่อป้องกัน CSRF   
-จากนั้น build http post ด้วย parameters `client_id`, `client_secret`, `code`, `grant_type=authorization_code`  
+จากนั้น build http post ด้วย parameters `client_id`, `client_secret`, `code`, `grant_type=authorization_code` และ `redirect_uri` ซึ่งต้องมีค่าเหมือน `redirec_uri` ข้อ 8  
 ส่ง request ไปขอ `access_token`, `refresh_token` + ข้อมูล `session_token` ที่ Authorization Server `/oauth/token`  
   
 Http Request Headers
