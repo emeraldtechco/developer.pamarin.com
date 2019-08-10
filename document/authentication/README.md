@@ -328,6 +328,28 @@ Http Response Body
   
 ![forward-authentication.svg](./forward-authentication.svg)
 
+### Step 2) 
+
+จะนำ `access_token` มา build http post   
+ส่งไปตรวจสอบที่ Authorization Server `/oauth/session`  
+    
+Http Request headers  
+```
+Request Method : POST
+Content-Type : application/x-www-form-urlencoded
+Authorization : Bearer $ACCESS_TOKEN  
+```
+
+### Step 5)
+Headers ของ Step นี้ จะเหมือน step 2 เพียงแต่เปลี่ยนจาก `access_token` มาเป็น `session_token` แทน
+  
+Http Request headers  
+```
+Request Method : POST
+Content-Type : application/x-www-form-urlencoded
+Authorization : Bearer `$SESSION_TOKEN`  
+```
+
 # Signout
 
 ถ้าต้องการออกจากระบบ ให้ build http post ยิง request มาที่ Authorization Server `/oauth/signout` 
