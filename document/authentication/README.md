@@ -41,7 +41,7 @@
 # ข้อกำหนด
 
 - ทุก ๆ `access_token` และ `refresh_token` จะผูกกับข้อมูล login session ของ user หาก user ทำการ logout / signout ออกจากระบบ `access_token` และ `refresh_token` ทั้งหมดที่ผูกอยู่ จะถูก revoke ทิ้งทันที 
-- เมื่อทำการร้องขอ `access_token` ใหม่ แล้วมีการตอบกลับด้วย `refresh_token` ให้ใช้ `refresh_token` ใหม่นี้แทน `refresh_token` เดิม เพราะ `refresh_token` เดิมจะถูก Authorization Server revoke ทิ้ง ทำให้ไม่สามารถนำไปใช้งานได้   
+- เมื่อทำการร้องขอ `access_token` ใหม่ แล้วมีการตอบกลับด้วย `refresh_token` ให้ใช้ `refresh_token` ใหม่นี้แทน `refresh_token` เดิม เพราะ `refresh_token` เดิมจะถูก Authorization Server revoke ทิ้ง ทำให้ไม่สามารถนำไปใช้งานต่อได้   
 
 # Endpoint
 
