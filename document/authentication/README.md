@@ -24,6 +24,12 @@
 - ทุก ๆ Client / Resource Server จะต้องลงทะเบียน Application เพื่อขอรับ `client_id` และ `client_secret` ก่อน 
 - ทุก ๆ Client / Resource Server จะต้อง Download Public Key มาไว้ เพื่อใช้สำหรับ Verify `session_token` ที่ Authorization Server sign มาให้   
 
+# Architecture
+
+ระบบ Authentication ของ Pamarin ทำงานแบบ `Centralized Authentication` คือ มี server 1 ชุด ทำหน้าที่เป็นตัว authen/authorize แยกออกมาจากระบบอื่น ๆ หากต้องการร้องขอ resources หรือใช้งาน apis ต่าง ๆ จะต้องทำการ authen กับ `Authentication/Authorization Server` เพื่อขอ `access_token` มาใช้ในการร้องขอ resource นั้น ๆ
+
+![authentication-architecture.svg](./authentication-architecture.svg)
+
 # Token
 การใช้งาน APIs ต่าง ๆ ของ Pamarin จะประกอบด้วย token 3 ประเภท ได้แก่  
 - `session_token` เป็น token ที่ใช้แทนข้อมูล login session ของ user เป็นแบบ stateless ใช้ jwt (Json Web Token) ซึ่ง Authorization Server จะ sign ด้วย private key มาให้ ข้อมูลต่าง ๆ ของ user เช่น ชื่อ, สิทธิ์ (authorities), ข้อมูล client ที่ทำการ login จะเก็บไว้ใน token นี้ มีอายุ 1 นาที เมื่อ Client หรือ Resource Server ได้รับ token นี้ไป จะต้อง verify token ด้วย public key เพื่อเช็คว่า token นี้ยังคง valid อยู่ จึงจะสามารถนำ token ไปใช้งานต่อได้ 
