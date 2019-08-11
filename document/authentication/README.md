@@ -60,8 +60,8 @@
 ใช้สำหรับการ Grant Authorize หรือ Signin เข้าสู่ระบบ ผ่าน Web Browser  
   
 *** ขั้นตอนการ Authorize เพื่อขอ `access_token` จริง ๆ เกิดขึ้นใน Step ที่ 8  
-จะอ่านเริ่มต้นตั้งแต่ Step ที่ 8 เป็นต้นไป แล้ววนกลับมา Step 1 - 7 ก็ได้  
-   
+จะเริ่มอ่านต้นตั้งแต่ Step ที่ 8 เป็นต้นไป แล้ววนกลับมา Step ที่ 1 - 7 ก็ได้  
+<br/>
 ![authentication.svg](./authentication.svg)
 
 # Step
