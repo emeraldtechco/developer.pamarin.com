@@ -26,7 +26,7 @@
 
 # Architecture
 
-ระบบ Authentication ของ Pamarin ทำงานแบบ `Centralized Authentication` คือ มี server 1 ชุด ทำหน้าที่เป็นตัว authen/authorize แยกออกมาจากระบบอื่น ๆ หากต้องการร้องขอ resources หรือใช้งาน apis ต่าง ๆ จะต้องทำการ authen กับ `Authentication/Authorization Server` เพื่อขอ `access_token` มาใช้ในการร้องขอ resource นั้น ๆ
+ระบบ Authentication ของ Pamarin ทำงานแบบ `Centralized Authentication` คือ มี server 1 ชุด ทำหน้าที่เป็นตัว authen/authorize แยกออกมาจากระบบอื่น ๆ หากต้องการร้องขอ resources หรือใช้งาน apis ต่าง ๆ จะต้องทำการ authen กับ `Authorization Server` เพื่อขอ `access_token` มาใช้ในการร้องขอ resource นั้น ๆ
 
 ![authentication-architecture.svg](./authentication-architecture.svg)
 
