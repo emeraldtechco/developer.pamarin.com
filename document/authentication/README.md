@@ -33,7 +33,7 @@
 # Token
 การใช้งาน APIs ต่าง ๆ ของ Pamarin จะประกอบด้วย token 3 ประเภท ได้แก่  
 - `session_token` เป็น token ที่ใช้แทนข้อมูล login session ของ user เป็นแบบ stateless ใช้ jwt (Json Web Token) ซึ่ง Authorization Server จะ sign ด้วย private key มาให้ ข้อมูลต่าง ๆ ของ user เช่น id, ชื่อ, สิทธิ์ (authorities), ข้อมูล client ที่ทำการ login จะเก็บไว้ใน token นี้ มีอายุ 1 นาที เมื่อ Client หรือ Resource Server ได้รับ token นี้ไป จะต้อง verify token ด้วย public key เพื่อเช็คว่า token นี้ยังคง valid อยู่ จึงจะสามารถนำ token ไปใช้งานต่อได้ 
-- `access_token` เป็น token แบบ stateful (ไม่ใช้ jwt) คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server (sync redis) ใช้สำหรับขอเข้าถึง Resources หรือ Apis ต่าง ๆ ของระบบ มีอายุ 30 นาที 
+- `access_token` เป็น token แบบ stateful (ไม่ใช้ jwt) คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server (Sync ข้อมูลกับ Redis) ใช้สำหรับขอเข้าถึง Resources หรือ Apis ต่าง ๆ ของระบบ มีอายุ 30 นาที 
 - `refresh_token` เป็น token แบบ stateful (ไม่ใช้ jwt) เหมือน `access_token` คือ มีการเก็บข้อมูล token ไว้ที่ Authorization Server เช่นเดียวกัน ใช้สำหรับขอ `access_token` ใหม่ กรณีที่ `access_token` หมดอายุ (expired) มีอายุ 3 วัน   
 
 *** เหตุผลว่าทำไมถึงใช้ ไม่ใช้ jwt ลองอ่านบทความประกอบดู
