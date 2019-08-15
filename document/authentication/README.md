@@ -109,23 +109,21 @@ Http Response Body
 *** ถ้า verify `session_token` ด้วย public key สำเร็จ จะได้หน้าตา session เป็นดังนี้ 
 ```json
 {
-    "id": "df1434aa-7b81-481f-9efa-e85eb39448cd", 
-    "issuedAt": 1565197615855, 
-    "expiresAt": 1565199415855,
-    "user": {
-        "id": "5cff55864ca1bc12305164ba", 
-	"name": "Mr. User Test",
-	"authorities": [
-	    "ADMIN"
-	]
-    },
-    "client": {
-        "id": "b98e21b4-ce2a-11e7-abc4-cec278b6b50a",
-	"name": "OAuth2 Test Application",
-	"scopes": [
-	    "user:public_profile"
-	]
-    }
+   "exp":1565889888,
+   
+   "id":"96a067fc-e504-468e-a479-e7f8258ea339",
+   "issuedAt":1565889827552,   
+   "expiresAt":1565891627552,   
+   "user_id":"5d401080cc26c76dbe8814c9",
+   "user_name":"Mr. User Test",
+   "user_authorities":[  
+	"ADMIN"
+   ],
+   "client_id":"5d346258c4404e24344c233d",  
+   "client_name":"OAuth Client for Test",   
+   "client_scopes":[  
+      "user:public_profile"
+   ]
 }
 ```
 
