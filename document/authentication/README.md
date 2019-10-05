@@ -387,4 +387,9 @@ Authorization : Bearer $ACCESS_TOKEN
 Authorization Server จะทำการ revoke token ทั้งหมดที่ผูกกับ user session และ invalidate user session ทิ้ง  
 
 ---
+
+# OAuth Client Filter / Middleware Flow 
+
+![OAuth Client Filter Flow](./oauth-client-flow.svg)
+
 หากพบปัญหาหรือข้อผิดพลาดอะไรบนเอกสาร สามารถแจ้ง `issue` ได้ที่ [https://github.com/pamarin-official/developer.pamarin.com](https://github.com/pamarin-official/developer.pamarin.com)
