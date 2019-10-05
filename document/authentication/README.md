@@ -390,7 +390,7 @@ Authorization Server จะทำการ revoke token ทั้งหมดท
 
 ![OAuth Client Filter Flow](./oauth-client-flow.svg)
   
-*** หมายเหตุ : การเช็ค authority (สิทธิ์) อาจจะทำในส่วนของ Filter หรือ middleware ที่รับผิดชอบนั้น ๆ แทน 
+*** หมายเหตุ : การเช็ค authority (สิทธิ์) อาจจะทำในส่วนของ Filter หรือ middleware ที่รับผิดชอบเรื่องนั้น ๆ แทน 
 
 
 ---
