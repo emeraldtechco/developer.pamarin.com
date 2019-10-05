@@ -390,6 +390,7 @@ Authorization Server จะทำการ revoke token ทั้งหมดท
 
 ![OAuth Client Filter Flow](./oauth-client-flow.svg)
 
+*** หมายเหตุ : การเช็ค authority (สิทธิ์) อาจจะทำในส่วนของ Filter หรือ middleware ที่รับผิดชอบนั้น ๆ แทน 
 ---
 
 หากพบปัญหาหรือข้อผิดพลาดอะไรบนเอกสาร สามารถแจ้ง `issue` ได้ที่ [https://github.com/pamarin-official/developer.pamarin.com](https://github.com/pamarin-official/developer.pamarin.com)
