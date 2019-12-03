@@ -159,7 +159,8 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
       "description": "password not equals confirm password",
       "name": "confirmPassword"
     }
-  ],  
+  ], 
+  "error_data" : {},
   "state": "8wC04d/1cW6bE5M="
 }
 ```
@@ -171,6 +172,31 @@ Reference : [https://developer.mozilla.org/th/docs/Web/HTTP/Status](https://deve
   - `length` จะต้องมีความยาว String ตามที่กำหนด 
   - `size` จะต้องมี size ตามที่กำหนด
 - `error_fields[].description` (String) คือ คำอธิบาย error field นั้น ๆ
+
+# error_data
+> data ที่ต้องการส่งมาให้ front end ใช้สำหรับการแสดงผล   
+  
+- type : `Object`
+- nullable : Not Allow (default empty object)    
+
+ตัวอย่าง
+
+```json
+{
+  "error": "duplicate_code",
+  "error_status": 409,
+  "error_description": "duplicate code \"1234\"",
+  "error_at": 1575360940699,
+  "error_uri": "https://developer.pamarin.com/document/error/",
+  "error_code": "2B575C06",
+  "error_on": "0.2",
+  "error_fields": [],
+  "error_data": {
+    "code" : "1234"
+  },
+  "state": null
+}
+```
 
 # State
 
