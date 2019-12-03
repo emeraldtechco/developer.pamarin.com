@@ -17,6 +17,7 @@
   "error_uri": "https://developer.pamarin.com/document/error/",
   "error_code": "31db055ecac97230",
   "error_fields": [],
+  "error_data" : {},
   "state": null
 }
 ```
@@ -27,6 +28,7 @@
 - `error_uri` (String) คือ url เอกสารสำหรับอธิบาย error 
 - `error_code` (String) คือ รหัส (`trace_id`) สำหรับผู้ดูและระบบ (Admin) หรือผู้พัฒนา ไว้ค้นหาตำแหน่งของ error ที่เกิดขึ้นในระบบ 
 - `error_fields` (Array of Object) ใช้สำหรับกรณี validate input form แล้วเกิด error ขึ้นที่ field ใด field หนึ่ง
+- `error_data` (Object) คือ data ที่ต้องการส่งมาให้ front end ใช้สำหรับการแสดงผล  
 - `state` (String) คือ validation state ของ client เพื่อใช้ป้องกัน csrf ซึ่ง server จะส่งกลับไปด้วยกรณีเกิด error (ถ้า client ส่ง parameter นี้มา)
 
 # รายะเอียด (Details)
